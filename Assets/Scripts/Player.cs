@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     private Animator anim;
     private Rigidbody2D rb;
 
-    private void Start()
+    private void Awake()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
