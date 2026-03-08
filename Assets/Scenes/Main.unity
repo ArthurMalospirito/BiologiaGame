@@ -1749,7 +1749,6 @@ GameObject:
   - component: {fileID: 1188145560}
   - component: {fileID: 1188145559}
   - component: {fileID: 1188145558}
-  - component: {fileID: 1188145565}
   - component: {fileID: 1188145564}
   - component: {fileID: 1188145563}
   - component: {fileID: 1188145562}
@@ -1976,27 +1975,12 @@ MonoBehaviour:
   XpBar: {fileID: 528901077}
   food: 0
   maxFood: 100
-  foodLooseAmount: 0.1
+  foodLooseAmount: 0.5
   FoodBar: {fileID: 1671637518}
   water: 0
   maxWater: 100
-  waterLooseAmount: 0.1
+  waterLooseAmount: 0.5
   WaterBar: {fileID: 713123164}
---- !u!114 &1188145565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1188145557}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa4ee5ec1ba73a541a00ca990fcfedd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::XpController
-  xp: 0
-  needXP: 50
-  XpBar: {fileID: 528901077}
 --- !u!1 &1277688184
 GameObject:
   m_ObjectHideFlags: 0
