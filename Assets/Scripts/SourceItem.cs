@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Food : MonoBehaviour
+public class SourceItem : MonoBehaviour
 {
     private Rigidbody2D rb;
     public float drag = 1;

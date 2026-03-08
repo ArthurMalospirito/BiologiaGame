@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1898647234721273963}
   - component: {fileID: 5228744917805918373}
   m_Layer: 0
-  m_Name: FoodSource
+  m_Name: Source
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4932594423045396487, guid: b85d9a0d7b1ec2041bb36bb576b93891, type: 3}
-  m_Color: {r: 1, g: 0.45, b: 0.45, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -104,6 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed015d55baf220d4486dab3e83372617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodSpawn
-  pushForce: 100
+  pushForce: 110
   cooldown: 5
   food: {fileID: 3519527287165336291, guid: b705f9cd996fe894eae55e97a1d66108, type: 3}
