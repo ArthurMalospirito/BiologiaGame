@@ -1,16 +1,31 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UiSlider : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] Slider slider;
+    [SerializeField] Image fill;
+    public bool hasText;
+    [SerializeField] TMP_Text text;
+    public string textType;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (slider.value<=0)
+        {
+            fill.enabled=false;
+        } else
+        {
+            fill.enabled=true;
+        }
+    }
+    public void SetFill(float amount, float totalAmount)
+    {
+        slider.value=amount/totalAmount;
+        if (hasText)
+        {
+            text.text = $"{amount}/{totalAmount} {textType}";
+        }
     }
 }

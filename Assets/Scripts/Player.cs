@@ -59,4 +59,16 @@ public class Player : MonoBehaviour
             CanMove=false;
         }
     }
+
+    private void OnFoodChange(float food)
+    {
+    }
+    private void OnWaterChange(float water)
+    {
+        
+    }
+    private void OnXpChange(int xp)
+    {
+        
+    }
 }
