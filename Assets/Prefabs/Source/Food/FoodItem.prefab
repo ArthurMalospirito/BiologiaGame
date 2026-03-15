@@ -17,6 +17,10 @@ PrefabInstance:
       value: 0.45
       objectReference: {fileID: 0}
     - target: {fileID: 3519527287165336291, guid: b705f9cd996fe894eae55e97a1d66108, type: 3}
+      propertyPath: drag
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3519527287165336291, guid: b705f9cd996fe894eae55e97a1d66108, type: 3}
       propertyPath: resourceType
       value: food
       objectReference: {fileID: 0}

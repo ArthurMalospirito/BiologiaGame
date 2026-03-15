@@ -1748,9 +1748,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1188145560}
   - component: {fileID: 1188145559}
-  - component: {fileID: 1188145558}
-  - component: {fileID: 1188145564}
   - component: {fileID: 1188145563}
+  - component: {fileID: 1188145558}
+  - component: {fileID: 1188145565}
+  - component: {fileID: 1188145564}
   - component: {fileID: 1188145562}
   - component: {fileID: 1188145561}
   m_Layer: 0
@@ -1772,8 +1773,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a5c1970767176e4fa2c7e36ec21015b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
-  speed: 3
-  dragForce: 1
 --- !u!212 &1188145559
 SpriteRenderer:
   serializedVersion: 2
@@ -1939,9 +1938,9 @@ MonoBehaviour:
   m_ActionEvents:
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1188145558}
-        m_TargetAssemblyTypeName: Player, Assembly-CSharp
-        m_MethodName: OnClick
+      - m_Target: {fileID: 1188145565}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnClickMove
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1953,6 +1952,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 6cd1a84d-ba1d-4147-a4df-afefb80eed44
     m_ActionName: 'Player/Click[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1188145565}
+        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
+        m_MethodName: OnMovement
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: a62ba4d8-ccf8-4257-b707-38ec6acde11e
+    m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -1981,6 +1996,21 @@ MonoBehaviour:
   maxWater: 100
   waterLooseAmount: 0.5
   WaterBar: {fileID: 713123164}
+--- !u!114 &1188145565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188145557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e7c2e5e6bb64a541aee2d79bc2dc6f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
+  speed: 5
+  dragForce: 1
+  currentMovementType: 0
 --- !u!1 &1277688184
 GameObject:
   m_ObjectHideFlags: 0

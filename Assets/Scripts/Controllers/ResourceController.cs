@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ResourceController : MonoBehaviour
 {
+
+
     public int xp;
     public int needXP=50;
     [SerializeField] private UiSlider XpBar;
@@ -39,7 +41,7 @@ public class ResourceController : MonoBehaviour
         {
             UpgradeXp();
         }
-        SendMessage("OnXpChange",xp,SendMessageOptions.RequireReceiver);
+        SendMessage("OnXpChange",xp,SendMessageOptions.DontRequireReceiver);
         XpBar.SetFill(xp,needXP);
 
 
@@ -60,7 +62,7 @@ public class ResourceController : MonoBehaviour
             food=maxFood;
         }
 
-        SendMessage("OnFoodChange",food,SendMessageOptions.RequireReceiver);
+        SendMessage("OnFoodChange",food,SendMessageOptions.DontRequireReceiver);
         FoodBar.SetFill(food,maxFood);
     }
     public void addWater(float amount)
@@ -71,7 +73,7 @@ public class ResourceController : MonoBehaviour
             water=maxWater;
         }
 
-        SendMessage("OnWaterChange",water,SendMessageOptions.RequireReceiver);
+        SendMessage("OnWaterChange",water,SendMessageOptions.DontRequireReceiver);
         WaterBar.SetFill(water,maxWater);
     }
 
