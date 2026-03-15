@@ -1,12 +1,14 @@
 
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
     public float speed=5;
-    private Vector2 direction;
-    private bool CanMove;
+    public Vector2 Direction {get; private set;}
+    public bool isMoving;
+    public bool CanMove {get;private set;} = true;
     public float dragForce =2.5f;
 
     public enum MovementType
@@ -35,6 +37,9 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (!CanMove)
+            return;
+            
         switch (currentMovementType)
         {
             case MovementType.SeekMouse:
@@ -50,16 +55,35 @@ public class PlayerMovement : MonoBehaviour
 
             break;
         }
+        
         LookDirection();
 
     }
     private void LookDirection()
     {
-        if (direction.sqrMagnitude > 0.01f)
+        if (Direction.sqrMagnitude > 0.01f)
         {
-            float rotationAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
+            float rotationAngle = Mathf.Atan2(Direction.y, Direction.x) * Mathf.Rad2Deg + 90;
             transform.rotation = Quaternion.Euler(0,0,rotationAngle);
         }
+    }
+
+    public void AddForce(Vector2 force)
+    {
+        rb.AddForce(force);
+    }
+
+    public void Stun(float stunTime)
+    {
+        CanMove=false;
+        StartCoroutine(CanMoveCoroutine(stunTime));
+        
+    }
+    private IEnumerator CanMoveCoroutine(float stunTime)
+    {
+        
+        yield return new WaitForSeconds(stunTime);
+        CanMove=true;
     }
 
 #region SeekMovement
@@ -68,11 +92,11 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed)
         {
-            CanMove=true;
+            isMoving=true;
         }
         if (context.canceled)
         {
-            CanMove=false;
+            isMoving=false;
         }
     }
 
@@ -81,11 +105,11 @@ public class PlayerMovement : MonoBehaviour
         Vector2 mouseScreen = Mouse.current.position.ReadValue();
         Vector3 mouseWorld = cam.ScreenToWorldPoint(mouseScreen);
         
-        direction = (Vector2)(mouseWorld - transform.position);
-        direction.Normalize();
-        if (CanMove)
+        Direction = (Vector2)(mouseWorld - transform.position);
+        Direction = Direction.normalized;
+        if (isMoving)
         {
-            rb.linearVelocity = speed * direction;
+            rb.linearVelocity = speed * Direction;
         }
 
     }
@@ -96,19 +120,24 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMovement(InputAction.CallbackContext callbackContext)
     {
-        direction = callbackContext.ReadValue<Vector2>();
+        if (callbackContext.performed)
+        {
+            isMoving=true;
+            Direction = callbackContext.ReadValue<Vector2>();
+        } else if(callbackContext.canceled)
+        {
+            isMoving=false;
+        }
+        
     }
 
     private void EightDirectionMove()
     {
-        direction.Normalize();
-        rb.linearVelocity = direction*speed;
+        Direction = Direction.normalized;
+        rb.linearVelocity = Direction*speed;
+
     }
 
 #endregion
 
-#region 
-
-
-#endregion
 }

@@ -1,16 +1,37 @@
+
 using UnityEngine;
 
-public class HealthManager : MonoBehaviour
+public class HealthController : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private int health;
+    [SerializeField] private int maxHealth=100;
+    [SerializeField] private UiSlider healthBar;
+    [SerializeField] private GameObject resetUi;
+
+    private void Start()
     {
-        
+        health=maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Damage(int amount)
     {
-        
+        health-=amount;
+        if (health>maxHealth)
+        {
+            health=maxHealth;
+        }else if (health<=0)
+        {
+            health=0;
+            Die();
+        }
+        healthBar.SetFill(health,maxHealth);
     }
+
+    private void Die()
+    {
+        resetUi.SetActive(true);
+        //Temporário destruir
+        Destroy(gameObject);
+    }
+
 }

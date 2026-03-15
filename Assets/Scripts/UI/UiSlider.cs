@@ -10,8 +10,10 @@ public class UiSlider : MonoBehaviour
     [SerializeField] TMP_Text text;
     public string textType;
 
-    private void Update()
+    public void SetFill(float amount, float totalAmount)
     {
+        slider.value=amount/totalAmount;
+
         if (slider.value<=0)
         {
             fill.enabled=false;
@@ -19,10 +21,7 @@ public class UiSlider : MonoBehaviour
         {
             fill.enabled=true;
         }
-    }
-    public void SetFill(float amount, float totalAmount)
-    {
-        slider.value=amount/totalAmount;
+
         if (hasText)
         {
             text.text = $"{amount}/{totalAmount} {textType}";

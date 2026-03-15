@@ -6,17 +6,17 @@ public class ResourceController : MonoBehaviour
 
 
     private int xp;
-    public int needXP=50;
+    [SerializeField] private int needXP=50;
     [SerializeField] private UiSlider XpBar;
 
     private float food;
-    public float maxFood=100;
-    public float foodLooseAmount=0.1f;
+    [SerializeField] private float maxFood=100;
+    [SerializeField] private float foodLooseAmount=0.1f;
     [SerializeField] private  UiSlider FoodBar;
 
     private float water;
-    public float maxWater=100;
-    public float waterLooseAmount=0.1f;
+    [SerializeField] private float maxWater=100;
+    [SerializeField] private float waterLooseAmount=0.1f;
     [SerializeField] private UiSlider WaterBar;
 
 
