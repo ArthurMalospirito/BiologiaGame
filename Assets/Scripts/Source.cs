@@ -1,4 +1,4 @@
-using System.Collections;
+
 using UnityEngine;
 
 public class Source : MonoBehaviour
@@ -25,7 +25,6 @@ public class Source : MonoBehaviour
     private void VerifyDistance()
     {
         float distanceToCamera = Vector2.Distance(transform.position, cam.transform.position);
-        Debug.Log(distanceToCamera);
 
         if (distanceToCamera<=distanceToActivate)
         {
