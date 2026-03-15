@@ -107,8 +107,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Food
   drag: 1.5
-  resourceType: 
-  resourceAmount: 1
+  resourceType: 0
+  resourceAmount: 3
   targetTag: Player
 --- !u!58 &5277120647791964169
 CircleCollider2D:

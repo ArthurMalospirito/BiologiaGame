@@ -57,7 +57,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (direction.sqrMagnitude > 0.01f)
         {
-            float rotationAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg - 90;
+            float rotationAngle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg + 90;
             transform.rotation = Quaternion.Euler(0,0,rotationAngle);
         }
     }

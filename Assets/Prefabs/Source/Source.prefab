@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FoodSpawn
   pushForce: 125
   cooldown: 5
+  amount: 2
   food: {fileID: 3519527287165336291, guid: b705f9cd996fe894eae55e97a1d66108, type: 3}
 --- !u!58 &-2140773649292872437
 CircleCollider2D:

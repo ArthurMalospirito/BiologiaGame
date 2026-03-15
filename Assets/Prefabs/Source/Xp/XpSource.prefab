@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: food
       value: 
       objectReference: {fileID: 3574843247389183722, guid: 87c5135b49c80a84c8a36aa60d8d07c4, type: 3}
+    - target: {fileID: 5228744917805918373, guid: b9075c52ceb204740abf11c1f788200e, type: 3}
+      propertyPath: amount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5293309750783415301, guid: b9075c52ceb204740abf11c1f788200e, type: 3}
       propertyPath: m_Name
       value: XpSource

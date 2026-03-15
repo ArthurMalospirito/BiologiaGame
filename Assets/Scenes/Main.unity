@@ -1822,8 +1822,8 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1499821748721256635, guid: e896e211e20d42e459cca377f99351d2, type: 3}
-  m_Color: {r: 0.21813813, g: 0.8113208, b: 0.7860214, a: 1}
+  m_Sprite: {fileID: -7232521027535748977, guid: 514bfcd6fef5b404b8de2265607550d6, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1909,7 +1909,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.45, y: 0.65}
+  m_Size: {x: 1, y: 1}
   m_Direction: 0
 --- !u!114 &1188145563
 MonoBehaviour:
@@ -1985,16 +1985,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a07eaf6e284ece41a32d33a8693f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceController
-  xp: 0
   needXP: 50
   XpBar: {fileID: 528901077}
-  food: 0
   maxFood: 100
-  foodLooseAmount: 0.5
+  foodLooseAmount: 1
   FoodBar: {fileID: 1671637518}
-  water: 0
   maxWater: 100
-  waterLooseAmount: 0.5
+  waterLooseAmount: 1
   WaterBar: {fileID: 713123164}
 --- !u!114 &1188145565
 MonoBehaviour:
@@ -2008,7 +2005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e7c2e5e6bb64a541aee2d79bc2dc6f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
-  speed: 5
+  speed: 4
   dragForce: 1
   currentMovementType: 0
 --- !u!1 &1277688184

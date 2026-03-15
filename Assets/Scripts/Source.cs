@@ -5,6 +5,7 @@ public class Source : MonoBehaviour
 {
     public float pushForce=100;
     public float cooldown = 5;
+    public int amount =1;
     public SourceItem food;
 
     private void OnEnable()
@@ -18,9 +19,12 @@ public class Source : MonoBehaviour
     }
     private void SpawnFood()
     {
-        Vector2 direction = new Vector2(Random.Range(-1f,1f),Random.Range(-1f,1f)).normalized;
-        SourceItem newFood = Instantiate(food,transform.position,Quaternion.identity);
-        newFood.AddForce(direction*(pushForce*Random.Range(0.85f,1.15f)));
+        for (int i=0;i<amount;i++)
+        {
+            Vector2 direction = new Vector2(Random.Range(-1f,1f),Random.Range(-1f,1f)).normalized;
+            SourceItem newFood = Instantiate(food,transform.position,Quaternion.identity);
+            newFood.AddForce(direction*(pushForce*Random.Range(0.85f,1.15f)));
+        }
     }
 
     private IEnumerator SpawnFoodCoroutine()
