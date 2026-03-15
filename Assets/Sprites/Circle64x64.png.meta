@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e896e211e20d42e459cca377f99351d2
+guid: b85d9a0d7b1ec2041bb36bb576b93891
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1499821748721256635
-    second: Capsule64x64_0
+      213: 4932594423045396487
+    second: Circle64x64_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,11 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-  spritePixelsToUnits: 100
-=======
   spritePixelsToUnits: 64
->>>>>>> testesIniciais
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,32 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Capsule64x64_0
+      name: Circle64x64_0
       rect:
         serializedVersion: 2
-<<<<<<< HEAD
-        x: 10
-        y: 0
-        width: 44
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
-=======
         x: 0
         y: 0
         width: 64
         height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
->>>>>>> testesIniciais
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5477011e0109f2be0800000000000000
-      internalID: -1499821748721256635
+      spriteID: 70891b66e78147440800000000000000
+      internalID: 4932594423045396487
       vertices: []
       indices: 
       edges: []
@@ -138,11 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-<<<<<<< HEAD
     spriteID: 
-=======
-    spriteID: 633f2c66f67d56b46971e59455bc89ee
->>>>>>> testesIniciais
     internalID: 0
     vertices: []
     indices: 
@@ -150,15 +133,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-<<<<<<< HEAD
       entries: []
-=======
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
->>>>>>> testesIniciais
     nameFileIdTable:
-      Capsule64x64_0: -1499821748721256635
+      Circle64x64_0: 4932594423045396487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
