@@ -8,6 +8,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 850698219391964940, guid: b9075c52ceb204740abf11c1f788200e, type: 3}
+      propertyPath: food
+      value: 
+      objectReference: {fileID: 3574843247389183722, guid: 87c5135b49c80a84c8a36aa60d8d07c4, type: 3}
+    - target: {fileID: 850698219391964940, guid: b9075c52ceb204740abf11c1f788200e, type: 3}
+      propertyPath: cooldown
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 1898647234721273963, guid: b9075c52ceb204740abf11c1f788200e, type: 3}
       propertyPath: m_Color.b
       value: 0

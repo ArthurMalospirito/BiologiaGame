@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2179074871917553596}
   - component: {fileID: 1898647234721273963}
   - component: {fileID: 5228744917805918373}
+  - component: {fileID: 850698219391964940}
   - component: {fileID: -2140773649292872437}
   - component: {fileID: 5605116643195556817}
   m_Layer: 0
@@ -106,10 +107,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed015d55baf220d4486dab3e83372617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodSpawn
+  distanceToActivate: 12
+--- !u!114 &850698219391964940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5293309750783415301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25d5ebc643a1be40ab23ba2b82b62ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SourceSpawn
   pushForce: 125
   cooldown: 5
   amount: 2
   food: {fileID: 3519527287165336291, guid: b705f9cd996fe894eae55e97a1d66108, type: 3}
+  spawnContainer: {fileID: 2179074871917553596}
 --- !u!58 &-2140773649292872437
 CircleCollider2D:
   m_ObjectHideFlags: 0

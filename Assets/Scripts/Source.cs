@@ -3,36 +3,39 @@ using UnityEngine;
 
 public class Source : MonoBehaviour
 {
-    public float pushForce=100;
-    public float cooldown = 5;
-    public int amount =1;
-    public SourceItem food;
+    private SpriteRenderer spriteRenderer;
+    private SourceSpawn sourceSpawn;
+    [SerializeField] private float distanceToActivate =10;
 
-    private void OnEnable()
+    private Camera cam;
+
+
+    private void Awake()
     {
-        StartCoroutine(nameof(SpawnFoodCoroutine));
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        sourceSpawn = GetComponent<SourceSpawn>();
+        cam = Camera.main;
     }
 
-    private void OnDisable()
+    private void Update()
     {
-        StopCoroutine(nameof(SpawnFoodCoroutine));
+        VerifyDistance();
     }
-    private void SpawnFood()
+
+    private void VerifyDistance()
     {
-        for (int i=0;i<amount;i++)
+        float distanceToCamera = Vector2.Distance(transform.position, cam.transform.position);
+        Debug.Log(distanceToCamera);
+
+        if (distanceToCamera<=distanceToActivate)
         {
-            Vector2 direction = new Vector2(Random.Range(-1f,1f),Random.Range(-1f,1f)).normalized;
-            SourceItem newFood = Instantiate(food,transform.position,Quaternion.identity);
-            newFood.AddForce(direction*(pushForce*Random.Range(0.85f,1.15f)));
+            spriteRenderer.enabled=true;
+            sourceSpawn.enabled=true;
+        } else
+        {
+            spriteRenderer.enabled=false;
+            sourceSpawn.enabled=false;
         }
     }
 
-    private IEnumerator SpawnFoodCoroutine()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(cooldown);
-            SpawnFood();
-        }
-    }
 }
