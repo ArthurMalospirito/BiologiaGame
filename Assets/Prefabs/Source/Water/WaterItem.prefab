@@ -26,7 +26,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3519527287165336291, guid: b705f9cd996fe894eae55e97a1d66108, type: 3}
       propertyPath: resourceType
-      value: water
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3519527287165336291, guid: b705f9cd996fe894eae55e97a1d66108, type: 3}
       propertyPath: resourceAmount

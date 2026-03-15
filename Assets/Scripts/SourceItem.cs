@@ -5,7 +5,15 @@ public class SourceItem : MonoBehaviour
 {
     private Rigidbody2D rb;
     [SerializeField] private float drag = 1;
-    [SerializeField] private string resourceType;
+
+    private enum ResourceType
+    {
+        None,
+        Xp,
+        Food,
+        Water
+    }
+    [SerializeField] private ResourceType resourceType;
     [SerializeField] private float resourceAmount=1;
 
     [SerializeField] private string targetTag = "Player";
@@ -34,13 +42,13 @@ public class SourceItem : MonoBehaviour
         {
             switch (resourceType)
             {
-                case "xp":
+                case ResourceType.Xp:
                     resourceController.addXp(Convert.ToInt32(resourceAmount));
                 break;
-                case "food":
+                case ResourceType.Food:
                     resourceController.addFood(resourceAmount);
                 break;
-                case "water":
+                case ResourceType.Water:
                     resourceController.addWater(resourceAmount);
                 break;
                 default:
