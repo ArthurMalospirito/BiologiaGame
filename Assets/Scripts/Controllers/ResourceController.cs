@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class ResourceController : MonoBehaviour
 {
-
+    private HealthController healthController;
+    [SerializeField] private int damageWithZeroResource=2;
 
     private int xp;
     [SerializeField] private int needXP=50;
@@ -19,6 +20,10 @@ public class ResourceController : MonoBehaviour
     [SerializeField] private float waterLooseAmount=0.1f;
     [SerializeField] private UiSlider WaterBar;
 
+    private void Awake()
+    {
+        healthController = GetComponent<HealthController>();
+    }
 
     private void OnEnable()
     {
@@ -61,6 +66,11 @@ public class ResourceController : MonoBehaviour
         {
             food=maxFood;
         }
+        if (food<=0)
+        {
+            food = 0;
+            healthController.Damage(damageWithZeroResource);
+        }
 
         SendMessage("OnFoodChange",food,SendMessageOptions.DontRequireReceiver);
         FoodBar.SetFill(food,maxFood);
@@ -71,6 +81,11 @@ public class ResourceController : MonoBehaviour
         if (water>maxWater)
         {
             water=maxWater;
+        }
+        if (water<=0)
+        {
+            water = 0;
+            healthController.Damage(damageWithZeroResource);
         }
 
         SendMessage("OnWaterChange",water,SendMessageOptions.DontRequireReceiver);
