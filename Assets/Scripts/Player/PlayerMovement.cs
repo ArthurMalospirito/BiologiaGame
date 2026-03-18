@@ -90,6 +90,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnClickMove(InputAction.CallbackContext context)
     {
+        if (currentMovementType!=MovementType.SeekMouse) 
+            return;
+            
         if (context.performed)
         {
             isMoving=true;
@@ -120,6 +123,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void OnMovement(InputAction.CallbackContext callbackContext)
     {
+        if (currentMovementType!=MovementType.EightDirection)
+            return;
+
         if (callbackContext.performed)
         {
             isMoving=true;
@@ -127,6 +133,7 @@ public class PlayerMovement : MonoBehaviour
         } else if(callbackContext.canceled)
         {
             isMoving=false;
+            Direction = Vector2.zero;
         }
         
     }

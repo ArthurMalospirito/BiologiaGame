@@ -2766,6 +2766,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a07eaf6e284ece41a32d33a8693f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceController
+  damageWithZeroResource: 2
   needXP: 50
   XpBar: {fileID: 528901077}
   maxFood: 100
@@ -2787,6 +2788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   speed: 4
+  isMoving: 0
   dragForce: 1
   currentMovementType: 0
 --- !u!210 &1188145566
