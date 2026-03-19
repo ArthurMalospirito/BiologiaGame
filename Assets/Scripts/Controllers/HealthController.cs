@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
@@ -8,6 +9,15 @@ public class HealthController : MonoBehaviour
     [SerializeField] private UiSlider healthBar;
     [SerializeField] private GameObject resetUi;
 
+    private Animator anim;
+    private bool blinking;
+    [SerializeField] private float blinkingTime=1.5f;
+
+    private void Awake()
+    {
+        anim = GetComponent<Animator>();
+    }
+
     private void Start()
     {
         health=maxHealth;
@@ -15,6 +25,9 @@ public class HealthController : MonoBehaviour
 
     public void Damage(int amount)
     {
+        if (blinking) 
+            return;
+            
         health-=amount;
         if (health>maxHealth)
         {
@@ -24,6 +37,8 @@ public class HealthController : MonoBehaviour
             health=0;
             Die();
         }
+        anim.SetTrigger("damage");
+        StartCoroutine(BlinkingCoroutine());
         healthBar.SetFill(health,maxHealth);
     }
 
@@ -32,6 +47,16 @@ public class HealthController : MonoBehaviour
         resetUi.SetActive(true);
         //Temporário destruir
         Destroy(gameObject);
+    }
+
+    private IEnumerator BlinkingCoroutine()
+    {
+        blinking=true;
+        anim.SetBool("blinking",blinking);
+        yield return new WaitForSeconds(blinkingTime);
+        blinking=false;
+        anim.SetBool("blinking",blinking);
+        
     }
 
 }

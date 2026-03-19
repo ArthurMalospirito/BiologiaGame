@@ -1,15 +1,24 @@
 
 using System.Collections;
+using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed=5;
     public Vector2 Direction {get; private set;}
+
+    public float speed=5;
     public bool isMoving;
     public bool CanMove {get;private set;} = true;
+
     public float dragForce =2.5f;
+
+    public float dashSpeed=15;
+    private bool isDashing;
+    public float dashTime =1.5f;
+    public float dashCooldown = 1.5f;
+    private bool canDash=true;
 
     public enum MovementType
     {
@@ -37,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (!CanMove)
+        if (!CanMove || isDashing)
             return;
             
         switch (currentMovementType)
@@ -70,6 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void AddForce(Vector2 force)
     {
+        rb.linearVelocity=Vector2.zero;
         rb.AddForce(force);
     }
 
@@ -84,6 +94,37 @@ public class PlayerMovement : MonoBehaviour
         
         yield return new WaitForSeconds(stunTime);
         CanMove=true;
+    }
+
+    public void OnDash(InputAction.CallbackContext callbackContext)
+    {
+        if (!canDash)
+            return;
+        if (!callbackContext.performed || isDashing)
+            return;
+
+        StartCoroutine(DashCoroutine());
+
+    }
+
+    private IEnumerator DashCoroutine()
+    {
+        isDashing=true;
+        CanMove=false;
+
+        rb.linearVelocity=Direction*dashSpeed;
+        yield return new WaitForSeconds(dashTime);
+        StartCoroutine(DashCooldownCoroutine());
+
+        isDashing=false;
+        CanMove=true;
+    }
+
+    private IEnumerator DashCooldownCoroutine()
+    {
+        canDash=false;
+        yield return new WaitForSeconds(dashCooldown);
+        canDash=true;
     }
 
 #region SeekMovement

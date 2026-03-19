@@ -8,7 +8,7 @@ public class Spike : MonoBehaviour
 
     public float stunTime = 1.5f;
 
-    public float pushForce =5;
+    public float pushForce =200;
 
 
     public void OnTriggerEnter2D(Collider2D other)
