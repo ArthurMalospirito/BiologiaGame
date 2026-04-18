@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7b4fc5c4be0a0344a2ecceec8807aa8, type: 3}
+  m_Name: TailTrait
+  m_EditorClassIdentifier: Assembly-CSharp::TailTrait
+  traitType: 1
+  spriteHomoDominant: {fileID: 1836003025889282970, guid: a856f8a256eb57e4a93298d48aff8cec, type: 3}
+  spriteHetero: {fileID: 5572303155330434031, guid: 91dd704bb389445459ca9690ec5d710e, type: 3}
+  spriteHomoRecessive: {fileID: -2277070219145392883, guid: 56d8e60a838c2e24183f6497873799cf, type: 3}
