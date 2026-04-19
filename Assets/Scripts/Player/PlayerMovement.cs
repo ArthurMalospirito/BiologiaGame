@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public bool isMoving;
     public bool CanMove {get;private set;} = true;
 
-    public float dragForce =2.5f;
+    [SerializeField] private float dragForce=5f;
+    [SerializeField]private float dashDragMultiplier =0.2f;
 
     public float dashSpeed=15;
     private bool isDashing;
@@ -113,9 +114,10 @@ public class PlayerMovement : MonoBehaviour
         CanMove=false;
 
         rb.linearVelocity=Direction*dashSpeed;
+        rb.linearDamping=dragForce*dashDragMultiplier;
         yield return new WaitForSeconds(dashTime);
         StartCoroutine(DashCooldownCoroutine());
-
+        rb.linearDamping=dragForce;
         isDashing=false;
         CanMove=true;
     }

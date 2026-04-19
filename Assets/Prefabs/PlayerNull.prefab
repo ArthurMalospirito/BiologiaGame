@@ -123,12 +123,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3f0101bbf39d04296cadef7a527330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeneticController
+  hasParents: 0
+  parent1: {fileID: 0}
+  parent2: {fileID: 0}
   genes:
   - traitType: 1
     genotype: 0
   - traitType: 2
     genotype: 0
-  TraitList: {fileID: 11400000, guid: d56d65bbf98577d4094481be055b5c63, type: 2}
+  TraitList: {fileID: 11400000, guid: 936d55e3dcbf5fe418019509d40611a6, type: 2}
 --- !u!70 &2221544936485156439
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -3,16 +3,28 @@ using System.Collections.Generic;
 using Enums.Traits;
 using Enums.Genotypes;
 
+/// <summary>
+/// Representa uma característica específica de um indivíduo, contento qual característica ele representa, o genótipo do indivíduo e os alelos que formam tal genótipo.
+/// </summary>
 [System.Serializable]
 public class Gene
 {
+    /// <summary>
+    /// Enum que define qual tipo de caracterísca esse Gene irá definir.
+    /// </summary>
     public Traits traitType;
-    public string[] AllelesArray {get;private set;}
+    /// <summary>
+    /// Enum que define o genótipo de tal característica.
+    /// </summary>
     public Genotypes genotype;
+    /// <summary>
+    /// Composição de Alelos que foram o genótipo.
+    /// </summary>
+    public string[] AllelesArray {get;private set;}
 
     public Gene(Traits TraitType, Genotypes genotype)
     {
-        this.traitType = TraitType;
+        traitType = TraitType;
         AllelesArray = new string[2];
         this.genotype = genotype;
         UpdateAlleles();
@@ -22,7 +34,9 @@ public class Gene
     {
         UpdateAlleles();
     }
-
+    /// <summary>
+    /// Função de inserir os alelos automaticamente baseado no genotype.
+    /// </summary>
     private void UpdateAlleles()
     {
         AllelesArray = genotype switch
@@ -33,6 +47,12 @@ public class Gene
             _ => new[] {"A","a"}
         };
     }
+    /// <summary>
+    /// Função de cruzar dois Genes específicos a fim de criar um terceiro escolhido de forma aleatória, contendo 50% das características de um e 50% das caracteríscas de outro.
+    /// </summary>
+    /// <param name="gene1">Primeiro gene que será herdado as características</param>
+    /// <param name="gene2">Segundo gene que será herdado as características</param>
+    /// <returns>Novo Gene feito do cruzamento dos dois genes inseridos.</returns>
     static public Gene CrossGenes(Gene gene1, Gene gene2)
     {
         gene1.UpdateAlleles();
@@ -68,7 +88,12 @@ public class Gene
         }
 
     }
-
+    /// <summary>
+    /// Função de cruzar listas completas de Genes, a fim de criar um novo conjunto de genes cruzados.
+    /// </summary>
+    /// <param name="genes1">Primeira lista de Genes</param>
+    /// <param name="genes2">Segunda lista de Genes</param>
+    /// <returns>Nova lista com genes cruzados</returns>
     static public List<Gene> CrossGenesList(List<Gene> genes1, List<Gene> genes2)
     {
 

@@ -278,7 +278,7 @@ MonoBehaviour:
   parent1: {fileID: 0}
   parent2: {fileID: 0}
   genes: []
-  TraitList: {fileID: 0}
+  TraitList: {fileID: 11400000, guid: 936d55e3dcbf5fe418019509d40611a6, type: 2}
 --- !u!70 &2221544936485156439
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
