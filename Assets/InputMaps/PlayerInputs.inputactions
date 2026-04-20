@@ -168,6 +168,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UI",
+            "id": "de401aa6-c452-4b6e-97f0-8ee9f64a3b21",
+            "actions": [
+                {
+                    "name": "OpenTabMenu",
+                    "type": "Button",
+                    "id": "7be474f7-eb14-4d07-8183-b978c876b895",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "7426559a-8348-44ff-a99f-846226f14cd3",
+                    "path": "<Keyboard>/tab",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "OpenTabMenu",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []

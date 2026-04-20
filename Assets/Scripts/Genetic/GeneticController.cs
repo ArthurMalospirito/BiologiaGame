@@ -32,6 +32,11 @@ public class GeneticController : MonoBehaviour
     /// </summary>
     [SerializeField] private TraitList TraitList;
 
+    /// <summary>
+    /// Referencia o elemento que aplica os Genes na UI.
+    /// </summary>
+    [SerializeField] private SetUIGenes setUIGenes;
+
     public void Awake()
     {
         TraitsList = TraitList.TraitsList;
@@ -64,6 +69,9 @@ public class GeneticController : MonoBehaviour
             
             trait.Apply(gameObject,gene);
         }
+        if (setUIGenes==null)
+            return;
+        setUIGenes.SetGenesInUI();
     }
 
     /// <summary>
