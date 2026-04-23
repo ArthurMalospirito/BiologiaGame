@@ -35,7 +35,7 @@ public class GeneticController : MonoBehaviour
     /// <summary>
     /// Referencia o elemento que aplica os Genes na UI.
     /// </summary>
-    [SerializeField] private SetUIGenes setUIGenes;
+    [SerializeField] private UIGenesController UIGenesController;
 
     public void Awake()
     {
@@ -69,9 +69,9 @@ public class GeneticController : MonoBehaviour
             
             trait.Apply(gameObject,gene);
         }
-        if (setUIGenes==null)
+        if (UIGenesController==null)
             return;
-        setUIGenes.SetGenesInUI();
+        UIGenesController.SetGenesInUI();
     }
 
     /// <summary>

@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed015d55baf220d4486dab3e83372617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodSpawn
-  distanceToActivate: 12
+  distanceToActivate: 18
 --- !u!114 &850698219391964940
 MonoBehaviour:
   m_ObjectHideFlags: 0

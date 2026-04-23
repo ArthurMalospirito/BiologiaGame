@@ -110,5 +110,4 @@ public class Gene
 
         return newGenes;
     }
-
 }

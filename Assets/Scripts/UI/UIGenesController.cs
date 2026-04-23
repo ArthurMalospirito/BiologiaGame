@@ -1,18 +1,32 @@
+using System.Collections.Generic;
 using Enums.Genotypes;
 using Enums.Traits;
 using TMPro;
 using UnityEngine;
 
-public class SetUIGenes : MonoBehaviour
+public class UIGenesController : MonoBehaviour
 {
     [SerializeField] private GeneticController geneticController;
-
     [SerializeField] private TMP_Dropdown dropdownColor;
     [SerializeField] private TMP_Dropdown dropdownTail;
 
-    public void Start()
+    public bool dropdownsActive=false;
+
+    private List<TMP_Dropdown> dropdownList = new List<TMP_Dropdown>();
+
+    private void Start()
+    {
+        dropdownList.Add(dropdownColor);
+        dropdownList.Add(dropdownTail);
+
+        SetGenesInUI();
+        SetDropdownActive(dropdownsActive);
+    }
+
+    private void OnEnable()
     {
         SetGenesInUI();
+        SetDropdownActive(dropdownsActive);
     }
 
     public void SetGenesInUI()
@@ -42,6 +56,15 @@ public class SetUIGenes : MonoBehaviour
             Genotypes.HomoRecessive => 2,
             _ => 1
         };
+    }
+
+    public void SetDropdownActive(bool state)
+    {
+        dropdownsActive=state;
+        foreach(var dropdown in dropdownList)
+        {
+            dropdown.interactable=dropdownsActive;
+        }
     }
 
 

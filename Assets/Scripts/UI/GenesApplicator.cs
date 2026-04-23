@@ -5,6 +5,7 @@ using UnityEngine;
 public class GenesApplicator : MonoBehaviour
 {
     [SerializeField] private GeneticController geneticController;
+    [SerializeField] private UIGenesController UIGenesController;
 
     private void ApplyGene(Traits traitType, int value)
     {
@@ -28,6 +29,8 @@ public class GenesApplicator : MonoBehaviour
         }
         
         geneticController.ReloadTraits();
+
+        UIGenesController.SetDropdownActive(false);
     }
     public void ApplyColor(int value)
     {

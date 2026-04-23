@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Source : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
     private SourceSpawn sourceSpawn;
     [SerializeField] private float distanceToActivate =10;
 
@@ -12,7 +11,6 @@ public class Source : MonoBehaviour
 
     private void Awake()
     {
-        spriteRenderer = GetComponent<SpriteRenderer>();
         sourceSpawn = GetComponent<SourceSpawn>();
         cam = Camera.main;
     }
@@ -28,11 +26,9 @@ public class Source : MonoBehaviour
 
         if (distanceToCamera<=distanceToActivate)
         {
-            spriteRenderer.enabled=true;
             sourceSpawn.enabled=true;
         } else
         {
-            spriteRenderer.enabled=false;
             sourceSpawn.enabled=false;
         }
     }

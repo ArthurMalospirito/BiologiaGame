@@ -6,8 +6,8 @@ public class TabMenuController : MonoBehaviour
 {
     [SerializeField]private Button buttonGenes;
     [SerializeField]private GameObject genesContent;
-    [SerializeField]private Button buttonCards;
-    [SerializeField]private GameObject cardsContent;
+    [SerializeField]private Button buttonBiotech;
+    [SerializeField]private GameObject biotechContent;
 
     private List<Button> ButtonList = new List<Button>();
     private List<GameObject> ContentList = new List<GameObject>();
@@ -15,10 +15,15 @@ public class TabMenuController : MonoBehaviour
     private void Awake()
     {
         ContentList.Add(genesContent);
-        ContentList.Add(cardsContent);
+        ContentList.Add(biotechContent);
 
         ButtonList.Add(buttonGenes);
-        ButtonList.Add(buttonCards);
+        ButtonList.Add(buttonBiotech);
+    }
+
+    private void Start()
+    {
+        OpenGenes();
     }
 
     public void OpenGenes()
@@ -28,11 +33,11 @@ public class TabMenuController : MonoBehaviour
         genesContent.SetActive(true);
     }
 
-    public void OpenCards()
+    public void OpenBiotech()
     {
         ResetMenu();
 
-        cardsContent.SetActive(true);
+        biotechContent.SetActive(true);
     }
 
 
