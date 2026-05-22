@@ -8,6 +8,7 @@ namespace Enums.Traits
         undefined,
         tail,
         color,
+        beak,
     }
 }
 

@@ -1,4 +1,5 @@
 using System.Collections;
+using Enums.EnumFoodType;
 using UnityEngine;
 
 public class ResourceController : MonoBehaviour
@@ -11,6 +12,7 @@ public class ResourceController : MonoBehaviour
     [SerializeField] private UiSlider XpBar;
 
     private float food;
+    [field: SerializeField] public FoodTypes CanEatType {get; set;}
     [SerializeField] private float maxFood=100;
     [SerializeField] private float foodLooseAmount=0.1f;
     [SerializeField] private  UiSlider FoodBar;
@@ -38,7 +40,7 @@ public class ResourceController : MonoBehaviour
         water = maxWater;
         food= maxFood;
     }
-    public void addXp(int amount)
+    public void AddXp(int amount)
     {
         xp+=amount;
 
@@ -59,7 +61,7 @@ public class ResourceController : MonoBehaviour
 
     }
 
-    public void addFood(float amount)
+    public void AddFood(float amount)
     {
         food+=amount;
         if (food>maxFood)
@@ -75,7 +77,7 @@ public class ResourceController : MonoBehaviour
         SendMessage("OnFoodChange",food,SendMessageOptions.DontRequireReceiver);
         FoodBar.SetFill(food,maxFood);
     }
-    public void addWater(float amount)
+    public void AddWater(float amount)
     {
         water+=amount;
         if (water>maxWater)
@@ -97,8 +99,8 @@ public class ResourceController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1);
-            addWater(-waterLooseAmount);
-            addFood(-foodLooseAmount);
+            AddWater(-waterLooseAmount);
+            AddFood(-foodLooseAmount);
         
         }
     }

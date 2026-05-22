@@ -9,6 +9,7 @@ public class UIGenesController : MonoBehaviour
     [SerializeField] private GeneticController geneticController;
     [SerializeField] private TMP_Dropdown dropdownColor;
     [SerializeField] private TMP_Dropdown dropdownTail;
+    [SerializeField] private TMP_Dropdown dropdownBeak;
 
     public bool dropdownsActive=false;
 
@@ -18,15 +19,16 @@ public class UIGenesController : MonoBehaviour
     {
         dropdownList.Add(dropdownColor);
         dropdownList.Add(dropdownTail);
+        dropdownList.Add(dropdownBeak);
 
         SetGenesInUI();
-        SetDropdownActive(dropdownsActive);
+        SetDropdownsActive(dropdownsActive);
     }
 
     private void OnEnable()
     {
         SetGenesInUI();
-        SetDropdownActive(dropdownsActive);
+        SetDropdownsActive(dropdownsActive);
     }
 
     public void SetGenesInUI()
@@ -39,6 +41,9 @@ public class UIGenesController : MonoBehaviour
                     break;
                 case Traits.tail:
                     SetDropdown(dropdownTail,gene);
+                    break;
+                case Traits.beak:
+                    SetDropdown(dropdownBeak,gene);
                     break;
                 default:
                     Debug.LogError("ERRO AO INSERIR GENES NA UI");
@@ -58,7 +63,7 @@ public class UIGenesController : MonoBehaviour
         };
     }
 
-    public void SetDropdownActive(bool state)
+    public void SetDropdownsActive(bool state)
     {
         dropdownsActive=state;
         foreach(var dropdown in dropdownList)

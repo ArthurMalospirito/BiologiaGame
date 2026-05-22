@@ -30,7 +30,7 @@ public class GenesApplicator : MonoBehaviour
         
         geneticController.ReloadTraits();
 
-        UIGenesController.SetDropdownActive(false);
+        UIGenesController.SetDropdownsActive(false);
     }
     public void ApplyColor(int value)
     {
@@ -40,5 +40,10 @@ public class GenesApplicator : MonoBehaviour
     public void ApplyTail(int value)
     {
         ApplyGene(Traits.tail,value);
+    }
+
+    public void ApplyBeak(int value)
+    {
+        ApplyGene(Traits.beak,value);
     }
 }

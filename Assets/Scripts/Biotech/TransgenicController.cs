@@ -27,7 +27,7 @@ public class TransgenicController : MonoBehaviour
         if (transgenicUses>0)
         {  
             tabMenuController.OpenGenes();
-            uiGenesController.SetDropdownActive(true);
+            uiGenesController.SetDropdownsActive(true);
             SetTransgenicUses(transgenicUses-1);
         } else
         {

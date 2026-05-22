@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2685884959077369234}
   m_Layer: 0
   m_Name: PlayerNull
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   - traitType: 2
     genotype: 0
   TraitList: {fileID: 11400000, guid: 936d55e3dcbf5fe418019509d40611a6, type: 2}
+  UIGenesController: {fileID: 0}
 --- !u!70 &2221544936485156439
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
