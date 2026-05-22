@@ -14,6 +14,7 @@ public class ProximityActivator : MonoBehaviour
 
     private void Update()
     {
+        if (player==null) return;
         float distance = Vector2.Distance(transform.position, player.position);
         targetComponent.enabled = distance <= activeRadius;
     }
