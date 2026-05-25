@@ -12,21 +12,6 @@ public class BeakTrait : Trait
 
     public override void Apply(GameObject target,Gene gene)
     {
-        ResourceController resourceController = target.GetComponent<ResourceController>();
-        if (resourceController==null)
-        {
-            Debug.Log("Não ache o resource controller");
-            return;
-        }
-
-        resourceController.CanEatType = gene.genotype switch
-        {
-            Genotypes.HomoDominant => FoodTypes.ThickBeak,
-            Genotypes.Hetero => FoodTypes.ThickBeak,
-            Genotypes.HomoRecessive => FoodTypes.ThinBeak,
-            _ => FoodTypes.ThickBeak
-        };
-
         GameObject beakGameObject = target.transform.Find("Head/Beak").gameObject;
 
         if (beakGameObject==null)
@@ -34,6 +19,7 @@ public class BeakTrait : Trait
             Debug.LogError("Não achei o elemento de Bico dentro do player!");
             return;
         }
+
         SpriteRenderer BeakSpriteRenderer = beakGameObject.GetComponent<SpriteRenderer>();
         if (BeakSpriteRenderer==null)
         {
@@ -56,6 +42,20 @@ public class BeakTrait : Trait
         }
 
         BeakSpriteRenderer.sprite = sprite;
+
+        ResourceController resourceController = target.GetComponent<ResourceController>();
+        if (resourceController==null)
+        {
+            return;
+        }
+
+        resourceController.CanEatType = gene.genotype switch
+        {
+            Genotypes.HomoDominant => FoodTypes.ThickBeak,
+            Genotypes.Hetero => FoodTypes.ThickBeak,
+            Genotypes.HomoRecessive => FoodTypes.ThinBeak,
+            _ => FoodTypes.ThickBeak
+        };
 
     }
 }

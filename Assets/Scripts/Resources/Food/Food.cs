@@ -33,6 +33,7 @@ public class Food: MonoBehaviour
 
         resourceController.AddFood(foodAmount);
         resourceController.AddWater(waterAmount);
+        SendMessageUpwards("OnEat",SendMessageOptions.DontRequireReceiver);
         Destroy(gameObject);
     }
 

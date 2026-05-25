@@ -5,6 +5,8 @@ using UnityEngine;
 public class FoodSource : MonoBehaviour
 {
     [SerializeField] private Food food;
+    [SerializeField] private int foodLimit = 5;
+    private int foodCount =0;
     [SerializeField] private int spawnAmount=1;
     [SerializeField] private float pushForce=500;
     [Range(0f,1f)][SerializeField] private float pushForceOffset=0.15f;
@@ -20,11 +22,18 @@ public class FoodSource : MonoBehaviour
     {
         SetActive(false);
     }
+    private void OnEat()
+    {
+        
+        foodCount--;
+    }
 
     private void SpawnFood()
     {
+        if (foodCount>=foodLimit) return;
         for (int i=0;i<spawnAmount;i++)
         {
+            foodCount++;
             Vector2 direction = Random.insideUnitCircle.normalized;
             Food newFood = Instantiate(food,transform.position,Quaternion.identity, gameObject.transform);
             newFood.MakeIntangible(1f);

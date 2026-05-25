@@ -4,6 +4,10 @@ public class CameraFollow : MonoBehaviour
 {
     public Transform player;
 
+    private void Start()
+    {
+        player = GameObject.FindWithTag("Player").transform;
+    }
     private void LateUpdate()
     {
         if (player!=null)

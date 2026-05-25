@@ -40,8 +40,7 @@ public class GeneticController : MonoBehaviour
     public void Awake()
     {
         TraitsList = TraitList.TraitsList;
-        if (hasParents==false)
-            return;
+        if (hasParents==false) return;
         
         genes = Gene.CrossGenesList(parent1.genes,parent2.genes);
     }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a85074951e638d4fb1409e87be4ad0d
+guid: c0cb8bd0302ead04496c04db7091ca7e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4045543831093302636
-    second: ThinBeak_0
+      213: 2885519812364972402
+    second: BirdleBody_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,8 +49,8 @@ TextureImporter:
   spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
-  alignment: 9
-  spritePivot: {x: 0.5, y: 0.015625}
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ThinBeak_0
+      name: BirdleBody_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 0
-        width: 26
-        height: 21
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49a2960e1575bd7c0800000000000000
-      internalID: -4045543831093302636
+      spriteID: 271bd503bfc6b0820800000000000000
+      internalID: 2885519812364972402
       vertices: []
       indices: 
       edges: []
@@ -126,7 +126,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ThinBeak_0: -4045543831093302636
+      BirdleBody_0: 2885519812364972402
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

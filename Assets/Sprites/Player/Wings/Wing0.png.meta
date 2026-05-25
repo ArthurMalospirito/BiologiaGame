@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4a85074951e638d4fb1409e87be4ad0d
+guid: 909e6e6a443c59a4c981126471e04e5e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4045543831093302636
-    second: ThinBeak_0
+      213: -8295862352401875674
+    second: Wing0_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -50,7 +50,7 @@ TextureImporter:
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 9
-  spritePivot: {x: 0.5, y: 0.015625}
+  spritePivot: {x: 0.2867565, y: 0.289963}
   spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ThinBeak_0
+      name: Wing0_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
+        x: 0
+        y: 6
         width: 26
-        height: 21
+        height: 58
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 49a2960e1575bd7c0800000000000000
-      internalID: -4045543831093302636
+      spriteID: 62dbc83d42d2fdc80800000000000000
+      internalID: -8295862352401875674
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ThinBeak_0: -4045543831093302636
+      Wing0_0: -8295862352401875674
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

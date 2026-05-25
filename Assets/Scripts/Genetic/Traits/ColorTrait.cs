@@ -10,9 +10,9 @@ public class ColorTrait : Trait
 
     public override void Apply(GameObject target,Gene gene)
     {
-        SpriteRenderer spriteRenderer = target.GetComponent<SpriteRenderer>();
+        SpriteRenderer[] spriteRenderers = target.GetComponentsInChildren<SpriteRenderer>();
 
-        if (spriteRenderer== null)
+        if (spriteRenderers==null)
         {
             Debug.LogError("Não achei SpriteRenderer para colocar a cor");
             return;
@@ -26,7 +26,11 @@ public class ColorTrait : Trait
             _ => Color.red
         };
 
-        spriteRenderer.color = color;
+        foreach(var spriteRenderer in spriteRenderers)
+        {
+            if (spriteRenderer.gameObject.CompareTag("NoPaint")) continue;
+            spriteRenderer.color=color;
+        }
             
     }
 }
