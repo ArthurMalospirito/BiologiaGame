@@ -7,11 +7,12 @@ public class PlayerMovement : MonoBehaviour
 {
     public Vector2 Direction {get; private set;}
 
-    public float speed=5;
+    public float normalSpeed = 4;
+    public float Speed{get;set;}
     public bool isMoving;
     public bool CanMove {get;private set;} = true;
 
-    [SerializeField] private float dragForce=5f;
+    public float dragForce=5f;
     [SerializeField]private float dashDragMultiplier =0.2f;
 
     public float dashSpeed=15;
@@ -35,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         rb.linearDamping = dragForce;
         cam = Camera.main;
+        Speed=normalSpeed;
     }
 
     private void FixedUpdate()
@@ -154,7 +156,7 @@ public class PlayerMovement : MonoBehaviour
         Direction = Direction.normalized;
         if (isMoving)
         {
-            rb.linearVelocity = speed * Direction;
+            rb.linearVelocity = Speed * Direction;
         }
 
     }
@@ -183,7 +185,7 @@ public class PlayerMovement : MonoBehaviour
     private void EightDirectionMove()
     {
         Direction = Direction.normalized;
-        rb.linearVelocity = Direction*speed;
+        rb.linearVelocity = Direction*Speed;
 
     }
 

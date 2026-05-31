@@ -1598,6 +1598,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa0f18d45863da742b675f101d0492d7, type: 3}
+--- !u!114 &1328987509 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9058183142936851452, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+  m_PrefabInstance: {fileID: 7879412757262158614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b588657502cb649a444b5edd695b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UICooldown
 --- !u!1 &1329627404
 GameObject:
   m_ObjectHideFlags: 0
@@ -2358,6 +2369,10 @@ PrefabInstance:
       propertyPath: genes.Array.data[2].traitType
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 8525999558510869849, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+      propertyPath: uICooldown
+      value: 
+      objectReference: {fileID: 1328987509}
     - target: {fileID: 8994679511183302148, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: XpBar
       value: 
@@ -2510,6 +2525,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1103175397866296773, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1115434548037907909, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -2521,6 +2540,10 @@ PrefabInstance:
     - target: {fileID: 2377262424871788194, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2417904221335002737, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_FillAmount
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2427393564580721043, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: dropdownBeak
@@ -2678,6 +2701,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9014866720549992524, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014866720549992524, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9088036285503685745, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -2703,9 +2734,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+  - {fileID: 229688945}
   - {fileID: 1721767645}
   - {fileID: 7879412757262158614}
-  - {fileID: 229688945}
   - {fileID: 2054148844}
   - {fileID: 1653773404}
   - {fileID: 1329627406}
