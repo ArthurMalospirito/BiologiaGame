@@ -1,6 +1,8 @@
 
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
@@ -9,17 +11,10 @@ public class PlayerMovement : MonoBehaviour
 
     public float normalSpeed = 4;
     public float Speed{get;set;}
-    public bool isMoving;
     public bool CanMove {get;private set;} = true;
+    private bool isMoving;
 
     public float dragForce=5f;
-    [SerializeField]private float dashDragMultiplier =0.2f;
-
-    public float dashSpeed=15;
-    private bool isDashing;
-    public float dashTime =1.5f;
-    public float dashCooldown = 1.5f;
-    private bool canDash=true;
 
     public enum MovementType
     {
@@ -30,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     private Camera cam;
+
+    public string dontMoveTag = "Menu";
 
     private void Awake()
     {
@@ -48,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (!CanMove || isDashing)
+        if (!CanMove)
             return;
             
         switch (currentMovementType)
@@ -98,42 +95,27 @@ public class PlayerMovement : MonoBehaviour
         CanMove=true;
     }
 
-    public void OnDash(InputAction.CallbackContext callbackContext)
+    private bool IsMouseOverTag(string targetTag)
     {
-        if (!canDash)
-            return;
-        if (!callbackContext.performed || isDashing)
-            return;
+        PointerEventData pointerData = new PointerEventData(EventSystem.current);
+        pointerData.position = Mouse.current.position.ReadValue();
 
-        StartCoroutine(DashCoroutine());
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(pointerData,results);
 
-    }
-
-    private IEnumerator DashCoroutine()
-    {
-        isDashing=true;
-        CanMove=false;
-
-        rb.linearVelocity=Direction*dashSpeed;
-        rb.linearDamping=dragForce*dashDragMultiplier;
-        yield return new WaitForSeconds(dashTime);
-        StartCoroutine(DashCooldownCoroutine());
-        rb.linearDamping=dragForce;
-        isDashing=false;
-        CanMove=true;
-    }
-
-    private IEnumerator DashCooldownCoroutine()
-    {
-        canDash=false;
-        yield return new WaitForSeconds(dashCooldown);
-        canDash=true;
+        foreach (RaycastResult result in results)
+        {
+            if (result.gameObject.CompareTag(targetTag)) return true;
+        }
+        return false;
     }
 
 #region SeekMovement
 
     public void OnClickMove(InputAction.CallbackContext context)
     {
+        if (IsMouseOverTag(dontMoveTag)) return;
+        
         if (currentMovementType!=MovementType.SeekMouse) 
             return;
             

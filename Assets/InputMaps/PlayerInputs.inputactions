@@ -25,18 +25,9 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Dash",
+                    "name": "Flight",
                     "type": "Button",
                     "id": "7a6b30b0-eb10-4fd7-9079-91ea4c06843e",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RightClick",
-                    "type": "Button",
-                    "id": "0eaf5bab-b888-480e-bc20-2f09759c40ca",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -172,46 +163,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Dash",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "644a21ab-06e2-42d9-80f8-e9f2fc2c5da7",
-                    "path": "<Mouse>/rightButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "RightClick",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "UI",
-            "id": "de401aa6-c452-4b6e-97f0-8ee9f64a3b21",
-            "actions": [
-                {
-                    "name": "OpenTabMenu",
-                    "type": "Button",
-                    "id": "7be474f7-eb14-4d07-8183-b978c876b895",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "7426559a-8348-44ff-a99f-846226f14cd3",
-                    "path": "<Keyboard>/tab",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "OpenTabMenu",
+                    "action": "Flight",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

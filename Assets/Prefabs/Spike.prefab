@@ -146,7 +146,7 @@ MonoBehaviour:
   targetTag: Player
   damage: 10
   stunTime: 0.5
-  pushForce: 300
+  pushForce: 200
 --- !u!1 &1490618421081261869
 GameObject:
   m_ObjectHideFlags: 0

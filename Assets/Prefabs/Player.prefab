@@ -177,9 +177,9 @@ MonoBehaviour:
     m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8399443887617744757}
-        m_TargetAssemblyTypeName: PlayerMovement, Assembly-CSharp
-        m_MethodName: OnDash
+      - m_Target: {fileID: 8525999558510869849}
+        m_TargetAssemblyTypeName: PlayerFlight, Assembly-CSharp
+        m_MethodName: OnFlight
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -196,19 +196,7 @@ MonoBehaviour:
     m_ActionId: 7be474f7-eb14-4d07-8183-b978c876b895
     m_ActionName: 'UI/OpenTabMenu[/Keyboard/tab]'
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8525999558510869849}
-        m_TargetAssemblyTypeName: PlayerFlight, Assembly-CSharp
-        m_MethodName: OnRightClick
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: 0eaf5bab-b888-480e-bc20-2f09759c40ca
     m_ActionName: 'Player/RightClick[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
@@ -243,10 +231,6 @@ MonoBehaviour:
   normalSpeed: 4
   isMoving: 0
   dragForce: 5
-  dashDragMultiplier: 0.2
-  dashSpeed: 10
-  dashTime: 1
-  dashCooldown: 1.5
   currentMovementType: 0
 --- !u!114 &8525999558510869849
 MonoBehaviour:
@@ -260,6 +244,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446a70c3bc13af548a607dec400d6540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFlight
+  flightTime: 5
+  flightCooldown: 10
+  dragOnFlight: 0.05
+  flightSpeedMultipliyer: 1.5
+  uICooldown: {fileID: 0}
 --- !u!114 &2722111536133634124
 MonoBehaviour:
   m_ObjectHideFlags: 0

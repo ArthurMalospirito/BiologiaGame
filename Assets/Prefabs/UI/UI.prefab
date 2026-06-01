@@ -174,6 +174,7 @@ RectTransform:
   - {fileID: 6033469193075375549}
   - {fileID: 3842913239279485247}
   - {fileID: 6124491701797156188}
+  - {fileID: 3846021196313392297}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -257,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 9f5e254529cc52b48946091d4ac83c89, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: d3a00d2efd532964395113e790d80a01, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -270,18 +271,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6cd1a84d-ba1d-4147-a4df-afefb80eed44
-    m_ActionName: 'Player/Click[/Mouse/leftButton]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: a62ba4d8-ccf8-4257-b707-38ec6acde11e
-    m_ActionName: 'Player/Movement[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7a6b30b0-eb10-4fd7-9079-91ea4c06843e
-    m_ActionName: 'Player/Dash[/Keyboard/space]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 7216000096887723911}
@@ -296,12 +285,40 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 7be474f7-eb14-4d07-8183-b978c876b895
-    m_ActionName: 'UI/OpenTabMenu[/Keyboard/tab]'
+    m_ActionId: 5080b725-0440-465c-9a80-27be0e8b3c76
+    m_ActionName: 'UI/Tab[/Keyboard/tab]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0eaf5bab-b888-480e-bc20-2f09759c40ca
-    m_ActionName: 'Player/RightClick[/Mouse/rightButton]'
+      m_Calls:
+      - m_Target: {fileID: 2062651162170991954}
+        m_TargetAssemblyTypeName: RightMenuController, Assembly-CSharp
+        m_MethodName: OnLeftClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d1cca18c-db61-4904-b5e3-833235ceaadb
+    m_ActionName: 'UI/LeftClick[/Mouse/leftButton]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2062651162170991954}
+        m_TargetAssemblyTypeName: RightMenuController, Assembly-CSharp
+        m_MethodName: OnRightClick
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 50611eba-eece-4656-a237-d29419b5fc28
+    m_ActionName: 'UI/RightClick[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: UI
@@ -1424,7 +1441,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8867890463933426282}
   m_FillRect: {fileID: 2309140122494406995}
   m_HandleRect: {fileID: 2377262424871788194}
@@ -2697,7 +2714,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 8449794951897648168}
   m_FillRect: {fileID: 6872416492180242528}
   m_HandleRect: {fileID: 9088036285503685745}
@@ -2806,7 +2823,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 6071376820296704610}
   m_FillRect: {fileID: 2727382509092451972}
   m_HandleRect: {fileID: 8015924289495551226}
@@ -6418,6 +6435,57 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &7178812118312762675
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3846021196313392297}
+  - component: {fileID: 2062651162170991954}
+  m_Layer: 5
+  m_Name: Menus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &3846021196313392297
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7178812118312762675}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5450064774887240976}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2062651162170991954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7178812118312762675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d06cf8e3c8c64f8b124167f06a77d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RightMenu
+  rightMenuPrefab: {fileID: 4271870476332014419, guid: 36ad06495fa6ac540a6fdf9b20b6835d, type: 3}
+  targetTag: Bird
+  dontCloseTag: Menu
 --- !u!1 &7192476314689291881
 GameObject:
   m_ObjectHideFlags: 0
@@ -7299,7 +7367,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 2351793383354738727}
   m_FillRect: {fileID: 3043173860624381834}
   m_HandleRect: {fileID: 5366651653496112762}

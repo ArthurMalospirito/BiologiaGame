@@ -28,7 +28,7 @@ public class PlayerFlight : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-    public void OnRightClick(InputAction.CallbackContext callbackContext)
+    public void OnFlight(InputAction.CallbackContext callbackContext)
     {
         if (!canFly) return;
 

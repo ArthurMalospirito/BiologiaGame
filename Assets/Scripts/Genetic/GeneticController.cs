@@ -9,15 +9,15 @@ public class GeneticController : MonoBehaviour
     /// <summary>
     /// Variável que define se o Indivíduo vai ter genes calculados pelo seus pais ou inseridos por outros meios.
     /// </summary>
-    [SerializeField] private bool hasParents;
+    public bool hasParents;
     /// <summary>
     /// Definição o primeiro indivíduo que cederá características ao indivíduo filho caso "hasParents" seja True. 
     /// </summary>
-    [SerializeField] private GeneticController parent1;
+    public GeneticController parent1;
     /// <summary>
     /// Definição o segundo indivíduo que cederá características ao indivíduo filho caso "hasParents" seja True. 
     /// </summary>
-    [SerializeField] private GeneticController parent2;
+    public GeneticController parent2;
     /// <summary>
     /// Lista de genes que definiram quais características serão expressas.
     /// </summary>
@@ -85,4 +85,5 @@ public class GeneticController : MonoBehaviour
 
         ApplyTraits();
     }
+    
 }

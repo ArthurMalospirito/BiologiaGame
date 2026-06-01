@@ -2333,6 +2333,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5129359972831376525, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+      propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7173731165316403849, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: hasParents
       value: 0
@@ -2504,10 +2508,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5478184170087522470, guid: 7a24a36a06251d54bbf2cf0a0a8b5fef, type: 3}
-      propertyPath: pushForce
-      value: 200
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2572,6 +2572,34 @@ PrefabInstance:
     - target: {fileID: 3043173860624381834, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590029410538662031, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590029410538662031, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionId
+      value: 5080b725-0440-465c-9a80-27be0e8b3c76
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590029410538662031, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionId
+      value: d1cca18c-db61-4904-b5e3-833235ceaadb
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590029410538662031, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 50611eba-eece-4656-a237-d29419b5fc28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590029410538662031, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ActionEvents.Array.data[0].m_ActionName
+      value: 'UI/Tab[/Keyboard/tab]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590029410538662031, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ActionEvents.Array.data[1].m_ActionName
+      value: 'UI/LeftClick[/Mouse/leftButton]'
+      objectReference: {fileID: 0}
+    - target: {fileID: 4590029410538662031, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: 'UI/RightClick[/Mouse/rightButton]'
       objectReference: {fileID: 0}
     - target: {fileID: 5210089248758758518, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
