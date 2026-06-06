@@ -11,9 +11,9 @@ public class PlayerFlight : MonoBehaviour
     private Coroutine _flightCorotuine;
 
     public float flightTime=5f;
-    public float flightCooldown = 10f;
-    [SerializeField] private float dragOnFlight=0.05f;
-    [SerializeField] private float flightSpeedMultipliyer=1.5f;
+    public float flightCooldown = 15f;
+    [SerializeField] private float dragOnFlight=0.5f;
+    public float flightSpeedMultipliyer=1.5f;
 
     [SerializeField] private UICooldown uICooldown;
     private Rigidbody2D rb; 

@@ -9,6 +9,7 @@ namespace Enums.Traits
         tail,
         color,
         beak,
+        wing,
     }
 }
 

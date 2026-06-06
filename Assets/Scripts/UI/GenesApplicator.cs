@@ -46,4 +46,8 @@ public class GenesApplicator : MonoBehaviour
     {
         ApplyGene(Traits.beak,value);
     }
+    public void ApplyWing(int value)
+    {
+        ApplyGene(Traits.wing,value);
+    }
 }

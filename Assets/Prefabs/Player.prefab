@@ -191,14 +191,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 7a6b30b0-eb10-4fd7-9079-91ea4c06843e
     m_ActionName: 'Player/Dash[/Keyboard/space]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7be474f7-eb14-4d07-8183-b978c876b895
-    m_ActionName: 'UI/OpenTabMenu[/Keyboard/tab]'
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 0eaf5bab-b888-480e-bc20-2f09759c40ca
-    m_ActionName: 'Player/RightClick[/Mouse/rightButton]'
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -229,9 +221,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   normalSpeed: 4
-  isMoving: 0
   dragForce: 5
   currentMovementType: 0
+  dontMoveTag: Menu
 --- !u!114 &8525999558510869849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,8 +237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFlight
   flightTime: 5
-  flightCooldown: 10
-  dragOnFlight: 0.05
+  flightCooldown: 15
+  dragOnFlight: 0.25
   flightSpeedMultipliyer: 1.5
   uICooldown: {fileID: 0}
 --- !u!114 &2722111536133634124

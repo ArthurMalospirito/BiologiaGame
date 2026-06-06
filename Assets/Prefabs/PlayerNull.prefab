@@ -133,6 +133,8 @@ MonoBehaviour:
     genotype: 1
   - traitType: 3
     genotype: 1
+  - traitType: 4
+    genotype: 1
   TraitList: {fileID: 11400000, guid: 936d55e3dcbf5fe418019509d40611a6, type: 2}
   UIGenesController: {fileID: 0}
 --- !u!70 &2221544936485156439
