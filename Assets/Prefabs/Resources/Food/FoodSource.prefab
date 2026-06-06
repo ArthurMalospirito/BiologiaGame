@@ -123,6 +123,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FoodSource
   food: {fileID: 4033484959069695462, guid: 725829855e42cf44e8d29340f2578a2f, type: 3}
+  foodLimit: 5
   spawnAmount: 1
   pushForce: 500
   pushForceOffset: 0.15
@@ -139,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44e491d1f2d7a54785716fd5661974c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProximityActivator
-  activeRadius: 15
+  activeRadius: 20
   targetComponent: {fileID: 3365200966018520632}
 --- !u!70 &4343543830822678391
 CapsuleCollider2D:

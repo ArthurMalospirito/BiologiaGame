@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EggController : MonoBehaviour
 {
-    
+    [SerializeField] private float timeToBorn=15;   
     private GeneticController geneticController;
 
     private void Awake()
@@ -13,7 +13,7 @@ public class EggController : MonoBehaviour
     }
     private void Start()
     {
-        StartCoroutine(BornCoroutine(5));
+        StartCoroutine(BornCoroutine(timeToBorn));
     }
     private IEnumerator BornCoroutine(float seconds)
     {

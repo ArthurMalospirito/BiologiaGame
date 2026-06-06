@@ -12,6 +12,7 @@ public class FoodSource : MonoBehaviour
     [Range(0f,1f)][SerializeField] private float pushForceOffset=0.15f;
     [SerializeField] private float spawnCooldown=15;
     public bool Active {get;set;} 
+    private Coroutine spawnFoodCoroutine;
 
     private void OnEnable()
     {
@@ -24,15 +25,14 @@ public class FoodSource : MonoBehaviour
     }
     private void OnEat()
     {
-        
         foodCount--;
     }
 
     private void SpawnFood()
     {
-        if (foodCount>=foodLimit) return;
         for (int i=0;i<spawnAmount;i++)
         {
+            if (foodCount>=foodLimit) return;
             foodCount++;
             Vector2 direction = Random.insideUnitCircle.normalized;
             Food newFood = Instantiate(food,transform.position,Quaternion.identity, gameObject.transform);
@@ -51,9 +51,12 @@ public class FoodSource : MonoBehaviour
     {
         Active =active;
         if (active)
-            StartCoroutine(SpawnFoodCoroutine());
+            spawnFoodCoroutine = StartCoroutine(SpawnFoodCoroutine());
         else
-            StopCoroutine(SpawnFoodCoroutine());
+        {
+            if(spawnFoodCoroutine==null) return;
+            StopCoroutine(spawnFoodCoroutine);
+        }
     }
     private IEnumerator SpawnFoodCoroutine()
     {
