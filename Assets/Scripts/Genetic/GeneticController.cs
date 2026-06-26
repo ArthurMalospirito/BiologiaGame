@@ -51,7 +51,7 @@ public class GeneticController : MonoBehaviour
 
     public void Start()
     {
-        ApplyTraits(); 
+        ReloadTraits();
     }
 
     public void OnEnable()

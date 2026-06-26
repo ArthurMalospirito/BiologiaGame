@@ -12,7 +12,7 @@ public class Creature : MonoBehaviour
     [Header("Agressive")]
     [SerializeField] private bool agressive;
     [SerializeField] private string[] targetTags={"Player"};
-    [SerializeField] private float detectionRadius=5f;
+    [SerializeField] private CreatureData creatureData;
     private bool acting=true;
 
     private Actions action = Actions.Idle;
@@ -137,7 +137,7 @@ public class Creature : MonoBehaviour
 
     private (Transform nearest,float nearestDistance) FindNearestTarget()
     {
-        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, detectionRadius*2);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, creatureData.DetectionRadius*2);
         
         Transform nearest = null;
         float nearestDistance = Mathf.Infinity;
@@ -173,7 +173,7 @@ public class Creature : MonoBehaviour
         (Transform target,float targetDistance) = FindNearestTarget();
         if (target==null) return;
 
-        if (targetDistance<=detectionRadius)
+        if (targetDistance<=creatureData.DetectionRadius)
         {
             action=Actions.Chasing;
             movement.MoveTo(target.position);  

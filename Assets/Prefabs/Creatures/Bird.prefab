@@ -278,7 +278,7 @@ MonoBehaviour:
   damage: 10
   stun: 0
   stunTime: 1.5
-  pushForce: 200
+  pushForce: 500
 --- !u!70 &571500887450933258
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -450,7 +450,7 @@ MonoBehaviour:
   agressive: 0
   targetTags:
   - Player
-  detectionRadius: 5
+  creatureData: {fileID: 11400000, guid: 2468f1a4b536c15418a2e848142ca594, type: 2}
 --- !u!114 &1285880550451349513
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -10,10 +10,6 @@ public class Damage : MonoBehaviour
 
     public float pushForce =200;
 
-    private void OnEnable()
-    {
-        Debug.Log($"{gameObject.name}: Fui enabled");
-    }
     public void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag(targetTag))
