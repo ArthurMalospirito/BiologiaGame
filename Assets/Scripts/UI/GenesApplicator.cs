@@ -25,7 +25,7 @@ public class GenesApplicator : MonoBehaviour
         }
         else
         {
-            gene.genotype = newGenotype;
+            gene.Genotype = newGenotype;
         }
         
         geneticController.ReloadTraits();

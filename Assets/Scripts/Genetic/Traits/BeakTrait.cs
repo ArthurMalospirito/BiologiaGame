@@ -27,7 +27,7 @@ public class BeakTrait : Trait
             return;   
         }
         
-        Sprite sprite = gene.genotype switch
+        Sprite sprite = gene.Genotype switch
         {
             Genotypes.HomoDominant => spriteHomoDominant,
             Genotypes.Hetero => spriteHetero,
@@ -49,7 +49,7 @@ public class BeakTrait : Trait
             return;
         }
 
-        resourceController.CanEatType = gene.genotype switch
+        resourceController.CanEatType = gene.Genotype switch
         {
             Genotypes.HomoDominant => FoodTypes.ThickBeak,
             Genotypes.Hetero => FoodTypes.ThickBeak,

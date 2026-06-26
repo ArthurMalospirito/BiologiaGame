@@ -18,7 +18,7 @@ public class ColorTrait : Trait
             return;
         }
 
-        Color color = gene.genotype switch
+        Color color = gene.Genotype switch
         {
             Genotypes.HomoDominant => colorHomoDominant,
             Genotypes.Hetero => colorHetero,

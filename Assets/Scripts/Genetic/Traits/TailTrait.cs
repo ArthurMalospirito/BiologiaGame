@@ -24,7 +24,7 @@ public class TailTrait : Trait
             return;   
         }
         
-        Sprite sprite = gene.genotype switch
+        Sprite sprite = gene.Genotype switch
         {
             Genotypes.HomoDominant => spriteHomoDominant,
             Genotypes.Hetero => spriteHetero,

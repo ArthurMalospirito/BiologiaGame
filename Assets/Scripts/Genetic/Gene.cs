@@ -16,17 +16,22 @@ public class Gene
     /// <summary>
     /// Enum que define o genótipo de tal característica.
     /// </summary>
-    public Genotypes genotype;
+    [SerializeField] private Genotypes _genotype;
+    public Genotypes Genotype {get=>_genotype;set
+        {
+            _genotype = value;
+            UpdateAlleles();
+        }}
     /// <summary>
     /// Composição de Alelos que foram o genótipo.
     /// </summary>
-    public string[] AllelesArray {get;private set;}
+    public string[] AllelesArray {get;set;}
 
     public Gene(Traits TraitType, Genotypes genotype)
     {
         traitType = TraitType;
         AllelesArray = new string[2];
-        this.genotype = genotype;
+        this.Genotype = genotype;
         UpdateAlleles();
     }
 
@@ -39,7 +44,7 @@ public class Gene
     /// </summary>
     private void UpdateAlleles()
     {
-        AllelesArray = genotype switch
+        AllelesArray = Genotype switch
         {
             Genotypes.HomoDominant => new[] {"A","A"},
             Genotypes.Hetero => new[] {"A","a"},

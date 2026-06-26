@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class Creature : MonoBehaviour
 {
-    [SerializeField] private Nest nest;
+    public Nest nest;
     [SerializeField] private float maxNestDistance=15f;
     [SerializeField] private float cooldownActions=5f;
     [Header("Agressive")]
@@ -28,24 +28,30 @@ public class Creature : MonoBehaviour
     
     private Movement movement;
     private Spin spin;
+    private Damage damage;
 
     private void Awake()
     {
         movement = GetComponent<Movement>();
         spin = GetComponent<Spin>();
+        damage = GetComponentInChildren<Damage>();
     }
     private void Start()
     {
         StartCoroutine(RunStatesCoroutine());
+        if (agressive)
+        {
+            damage.enabled=true;
+        }
     }
     private void Update()
     {
         float nestDistance = Vector2.Distance(transform.position, nest.transform.position);
-        if (nestDistance>=maxNestDistance)
+        if (nestDistance>=maxNestDistance && !returning)
         {
             action=Actions.Moving;
             MoveRandom();
-            StartCoroutine(ReturnHomeCoroutine(5f));
+            StartCoroutine(ReturnHomeCoroutine(3f));
             return;
         }
 
@@ -60,7 +66,7 @@ public class Creature : MonoBehaviour
         Vector2 positionToGo = nestPosition + randomOffset;
         movement.MoveTo(positionToGo);
     }
-    private void Spin()
+    private void StartSpin()
     {
         StartCoroutine(SpinCoroutine(5));
     }
@@ -78,10 +84,12 @@ public class Creature : MonoBehaviour
         {
             if (returning)
             {
+                yield return null;
                 continue;
             }
             if (action==Actions.Chasing)
             {
+                yield return null;
                 continue;
             }
 
@@ -93,7 +101,7 @@ public class Creature : MonoBehaviour
                     MoveRandom();
                 break;
                 case Actions.Spining:
-                    Spin();
+                    StartSpin();
                 break;
             }
         }

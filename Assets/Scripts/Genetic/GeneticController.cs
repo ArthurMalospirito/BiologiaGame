@@ -1,4 +1,8 @@
+
+using System;
 using System.Collections.Generic;
+using Enums.Genotypes;
+using Enums.Traits;
 using UnityEngine;
 
 /// <summary>
@@ -84,6 +88,27 @@ public class GeneticController : MonoBehaviour
         }
 
         ApplyTraits();
+    }
+
+    public void RandomizeGenes(Traits[] excludeTraits =null)
+    {
+        
+        foreach (var gene in genes)
+        {
+            bool exclude = false;
+            if (excludeTraits!=null)
+            {
+                foreach (var excludeTrait in excludeTraits)
+                {
+                    if (excludeTrait==gene.traitType) 
+                        exclude=true;
+                }
+            } 
+            if (exclude) continue;
+            List<Genotypes> values = new List<Genotypes>((Genotypes[])Enum.GetValues(typeof(Genotypes)));
+            Genotypes randomGenotype = values[UnityEngine.Random.Range(0,values.Count)];
+            gene.Genotype=randomGenotype;
+        }
     }
     
 }

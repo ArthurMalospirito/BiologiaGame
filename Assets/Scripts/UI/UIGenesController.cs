@@ -59,7 +59,7 @@ public class UIGenesController : MonoBehaviour
 
     private void SetDropdown(TMP_Dropdown dropdown, Gene gene)
     {
-        dropdown.value = gene.genotype switch
+        dropdown.value = gene.Genotype switch
         {
             Genotypes.HomoDominant => 0,
             Genotypes.Hetero => 1,

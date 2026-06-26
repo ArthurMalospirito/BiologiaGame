@@ -36,7 +36,7 @@ public class WingTrait : Trait
             return;   
         }
 
-        Sprite sprite = gene.genotype switch
+        Sprite sprite = gene.Genotype switch
         {
             Genotypes.HomoDominant => spriteHomoDominant,
             Genotypes.Hetero => spriteHetero,
@@ -61,14 +61,14 @@ public class WingTrait : Trait
             return;
         }
 
-        float flightTime = gene.genotype switch
+        float flightTime = gene.Genotype switch
         {
             Genotypes.HomoDominant => flightTimeHomoDominant,
             Genotypes.Hetero => flightTimeHetero,
             Genotypes.HomoRecessive => flightTimeHomoRecessive,
             _ => 0
         };
-        float flightSpeedMultipliyer = gene.genotype switch
+        float flightSpeedMultipliyer = gene.Genotype switch
         {
             Genotypes.HomoDominant => flightSpeedMultipliyerHomoDominant,
             Genotypes.Hetero => flightSpeedMultipliyerHetero,
@@ -76,7 +76,7 @@ public class WingTrait : Trait
             _ => 0
         };
 
-        float flightCooldown = gene.genotype switch
+        float flightCooldown = gene.Genotype switch
         {
             Genotypes.HomoDominant => flightCooldownHomoDominant,
             Genotypes.Hetero => flightCooldownHetero,
