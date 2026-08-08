@@ -18,11 +18,19 @@ public class EggController : MonoBehaviour
     private IEnumerator BornCoroutine(float seconds)
     {
         yield return new WaitForSeconds(seconds);
-        geneticController.gameObject.SetActive(true);
-        geneticController.ApplyTraits();
-        geneticController.transform.SetParent(null,worldPositionStays:true);
+        if (geneticController!=null)
+        {
+            geneticController.gameObject.SetActive(true);
+            geneticController.ApplyTraits();
+            geneticController.transform.SetParent(null,worldPositionStays:true);
+        }
         //Animação Aqui
         Destroy(gameObject);
 
+    }
+
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
     }
 }

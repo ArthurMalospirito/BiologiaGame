@@ -61,7 +61,15 @@ public class RightMenuController : MonoBehaviour
             Debug.LogError("Não tem Genetic Controller no passaro");
             return;
         }
-        rightMenu.geneticController = geneticController;
+        rightMenu.targetGeneticController = geneticController;
+
+        Creature creature = hit.collider.GetComponent<Creature>();
+        if (creature==null)
+        {
+            Debug.LogError("Não tem Creature no passaro");
+            return;
+        }
+        rightMenu.targetCreature = creature;
 
         Transform transform = hit.collider.transform;
         rightMenu.transformLocation = transform;

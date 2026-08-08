@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float normalSpeed = 4;
     public float Speed{get;set;}
-    public bool CanMove {get;private set;} = true;
+    public bool canMove = true;
     private bool isMoving;
 
     public float dragForce=5f;
@@ -45,7 +45,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
-        if (!CanMove)
+        if (!canMove)
             return;
             
         switch (currentMovementType)
@@ -84,7 +84,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void Stun(float stunTime)
     {
-        CanMove=false;
+        canMove=false;
         StartCoroutine(CanMoveCoroutine(stunTime));
         
     }
@@ -92,7 +92,7 @@ public class PlayerMovement : MonoBehaviour
     {
         
         yield return new WaitForSeconds(stunTime);
-        CanMove=true;
+        canMove=true;
     }
 
     private bool IsMouseOverTag(string targetTag)
