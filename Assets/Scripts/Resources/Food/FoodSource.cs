@@ -1,5 +1,6 @@
 
 using System.Collections;
+using Enums.EnumFoodID;
 using UnityEngine;
 
 public class FoodSource : MonoBehaviour
@@ -11,6 +12,7 @@ public class FoodSource : MonoBehaviour
     [SerializeField] private float pushForce=500;
     [Range(0f,1f)][SerializeField] private float pushForceOffset=0.15f;
     [SerializeField] private float spawnCooldown=15;
+    [SerializeField] private FoodID foodID;
     public bool Active {get;set;} 
     private Coroutine spawnFoodCoroutine;
 
@@ -26,6 +28,7 @@ public class FoodSource : MonoBehaviour
     private void OnEat()
     {
         foodCount--;
+        PlayerStatsManager.Instance.AddFood(foodID);
     }
 
     private void SpawnFood()

@@ -516,7 +516,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44e491d1f2d7a54785716fd5661974c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProximityActivator
-  activeRadius: 30
+  resourceData: {fileID: 11400000, guid: f5ddf7a4328345543b12b8db7e9b67fa, type: 2}
   targetComponent: {fileID: 885933845359380972}
 --- !u!70 &7835177303395898720
 CapsuleCollider2D:
