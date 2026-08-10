@@ -7,6 +7,7 @@ public class UsesController : MonoBehaviour
 {
 
     [SerializeField] private FoodID trackedFoodID;
+    [SerializeField] private int internalAmount=0;
     [SerializeField] private int needAmount = 10;    
     [SerializeField] private UiSlider uiSlider;
 
@@ -16,13 +17,13 @@ public class UsesController : MonoBehaviour
     }
     private void CalcUses()
     {
-        int foodAmount = PlayerStatsManager.Instance.GetCount(trackedFoodID);
+        int foodAmount = PlayerStatsManager.Instance.GetCount(trackedFoodID)-internalAmount;
 
         while (foodAmount>=needAmount)
         {
             AddUses(1);
             foodAmount-=needAmount;
-            PlayerStatsManager.Instance.SetFood(trackedFoodID,foodAmount);
+            internalAmount+=needAmount;
         }
         uiSlider.SetFill(foodAmount,needAmount);
     }
