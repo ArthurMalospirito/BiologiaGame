@@ -68,7 +68,7 @@ public class Creature : MonoBehaviour
     }
     private void StartSpin()
     {
-        StartCoroutine(SpinCoroutine(5));
+        StartCoroutine(SpinCoroutine(5f));
     }
     private IEnumerator SpinCoroutine(float seconds)
     {
@@ -93,7 +93,10 @@ public class Creature : MonoBehaviour
                 continue;
             }
 
-            yield return new WaitForSeconds(cooldownActions);
+            //Colocando variância entre as ações.
+            float offset = UnityEngine.Random.Range(-0.5f,0.5f);
+
+            yield return new WaitForSeconds(cooldownActions+offset);
             action = RandomAction(new Actions[]{Actions.Chasing,Actions.Idle});
             switch (action)
             {

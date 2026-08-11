@@ -7307,7 +7307,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UsesController
   trackedFoodID: 0
-  needAmount: 10
+  internalAmount: 0
+  needAmount: 25
   uiSlider: {fileID: 1670123368979365915}
 --- !u!1 &5810190475071250651
 GameObject:

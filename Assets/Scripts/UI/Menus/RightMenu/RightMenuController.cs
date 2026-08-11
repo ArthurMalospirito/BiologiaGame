@@ -1,5 +1,6 @@
 
 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -11,6 +12,7 @@ public class RightMenuController : MonoBehaviour
     [SerializeField] private RightMenu rightMenuPrefab;
     [SerializeField] private string targetTag="Bird";
     [SerializeField] private string dontCloseTag="Menu";
+    [SerializeField] private int procreateCooldown=90;
 
     public void OnRightClick(InputAction.CallbackContext callbackContext)
     {
@@ -95,6 +97,24 @@ public class RightMenuController : MonoBehaviour
             if (result.gameObject.CompareTag(targetTag)) return true;
         }
         return false;
+    }
+
+    public void StartProcreateCooldown()
+    {
+        StartCoroutine(ProcreateCooldownCoroutine(procreateCooldown));
+    }
+
+    private IEnumerator ProcreateCooldownCoroutine(int procreateCooldown)
+    {
+        RightMenu.procreateCooldown = procreateCooldown;
+        while (RightMenu.procreateCooldown>0)
+        {
+            yield return new WaitForSeconds(1);
+            RightMenu.procreateCooldown-=1;
+            if (rightMenu!=null)
+                rightMenu.SetProcreateCooldown(RightMenu.procreateCooldown);
+        }
+        RightMenu.canProcreate=true;
     }
 
 }
