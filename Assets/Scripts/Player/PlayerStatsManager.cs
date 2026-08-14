@@ -9,6 +9,9 @@ public class PlayerStatsManager : MonoBehaviour
     public static PlayerStatsManager Instance { get; private set; }
     public event Action<FoodID, int> OnFoodCountChanged;
     private Dictionary<FoodID, int> foodCounts = new Dictionary<FoodID, int>();
+    public static float healthMultipliyer=1;
+    public static float foodMultipliyer=1;
+    public static float waterMultipliyer=1;
 
     private void Awake()
     {

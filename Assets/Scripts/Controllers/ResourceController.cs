@@ -7,18 +7,16 @@ public class ResourceController : MonoBehaviour
     private HealthController healthController;
     [SerializeField] private int damageWithZeroResource=2;
 
-    private int xp;
-    [SerializeField] private int needXP=50;
-    [SerializeField] private UiSlider XpBar;
-
     private float food;
     [field: SerializeField] public FoodTypes CanEatType {get; set;}
-    [SerializeField] private float maxFood=100;
+    [SerializeField] private float initialMaxFood=100;
+    private float maxFood=100;
     [SerializeField] private float foodLooseAmount=0.1f;
     [SerializeField] private  UiSlider FoodBar;
 
     private float water;
-    [SerializeField] private float maxWater=100;
+    [SerializeField] private float initialMaxWater=100;
+    private float maxWater=100;
     [SerializeField] private float waterLooseAmount=0.1f;
     [SerializeField] private UiSlider WaterBar;
 
@@ -30,6 +28,8 @@ public class ResourceController : MonoBehaviour
     private void OnEnable()
     {
         StartCoroutine(nameof(LooseResourcesCoroutine));
+        maxFood=initialMaxFood*PlayerStatsManager.foodMultipliyer;
+        maxWater=initialMaxWater*PlayerStatsManager.waterMultipliyer;
     }
     private void OnDisable()
     {
@@ -39,26 +39,6 @@ public class ResourceController : MonoBehaviour
     {
         water = maxWater;
         food= maxFood;
-    }
-    public void AddXp(int amount)
-    {
-        xp+=amount;
-
-        if (xp>=needXP)
-        {
-            UpgradeXp();
-        }
-        SendMessage("OnXpChange",xp,SendMessageOptions.DontRequireReceiver);
-        XpBar.SetFill(xp,needXP);
-
-
-    }
-
-    public void UpgradeXp()
-    {
-        xp-=needXP;
-        needXP+=50;
-
     }
 
     public void AddFood(float amount)
@@ -105,6 +85,10 @@ public class ResourceController : MonoBehaviour
         }
     }
 
-
+    public void UpdateStats()
+    {
+        maxFood=initialMaxFood*PlayerStatsManager.foodMultipliyer;
+        maxWater=initialMaxWater*PlayerStatsManager.waterMultipliyer;
+    }
 
 }

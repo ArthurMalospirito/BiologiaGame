@@ -73,6 +73,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1614153239363213658, guid: f1ca9aee08c2268479fe50e19b701caf, type: 3}
     - target: {fileID: 3365200966018520632, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
+      propertyPath: foodID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365200966018520632, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: foodLimit
       value: 6
       objectReference: {fileID: 0}

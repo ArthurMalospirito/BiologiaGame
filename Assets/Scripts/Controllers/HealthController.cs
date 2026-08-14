@@ -1,11 +1,13 @@
 
 using System.Collections;
+using Unity.Collections;
 using UnityEngine;
 
 public class HealthController : MonoBehaviour
 {
-    private int health;
-    [SerializeField] private int maxHealth=100;
+    private float health;
+    [SerializeField] float initialMaxHealth=100;
+    private float maxHealth=100;
     [SerializeField] private UiSlider healthBar;
     [SerializeField] private GameObject resetUi;
 
@@ -20,6 +22,7 @@ public class HealthController : MonoBehaviour
 
     private void Start()
     {
+        maxHealth=initialMaxHealth*PlayerStatsManager.healthMultipliyer;
         health=maxHealth;
     }
 
@@ -57,6 +60,22 @@ public class HealthController : MonoBehaviour
         blinking=false;
         anim.SetBool("blinking",blinking);
         
+    }
+    public void UpdateStats()
+    {
+        maxHealth=initialMaxHealth*PlayerStatsManager.healthMultipliyer;
+    }
+
+    public void AddHealth(float value)
+    {
+        if (health+value>maxHealth)
+        {
+            health=maxHealth;
+        }
+        else
+        {
+            health+=value;
+        }
     }
 
 }

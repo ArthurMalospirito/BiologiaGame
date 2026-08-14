@@ -761,17 +761,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CameraFollow
   player: {fileID: 0}
---- !u!114 &528901077 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4314900896860828047, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
-  m_PrefabInstance: {fileID: 7879412757262158614}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4dd5651f0109d154b9ba1f941f584a66, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UiSlider
 --- !u!4 &629901848 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8583504209767689248, guid: 9c22fd0ec8d5c7946b0bc46303abbff3, type: 3}
@@ -2021,6 +2010,10 @@ PrefabInstance:
       propertyPath: healthBar
       value: 
       objectReference: {fileID: 1187290858}
+    - target: {fileID: 2722111536133634124, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+      propertyPath: maxHealth
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 2723105925853487703, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.9800236
@@ -2136,7 +2129,7 @@ PrefabInstance:
     - target: {fileID: 8994679511183302148, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: XpBar
       value: 
-      objectReference: {fileID: 528901077}
+      objectReference: {fileID: 0}
     - target: {fileID: 8994679511183302148, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: FoodBar
       value: 
