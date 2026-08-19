@@ -76,6 +76,7 @@ public class HealthController : MonoBehaviour
         {
             health+=value;
         }
+        healthBar.SetFill(health,maxHealth);
     }
 
 }

@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8b0b3c7ab7799409cfd66cf78c8314, type: 3}
   m_Name: ResourceData
   m_EditorClassIdentifier: Assembly-CSharp::ResourceData
-  ActivateRadius: 30
+  ActivateRadius: 50

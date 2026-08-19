@@ -110,6 +110,11 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
+    public void UpdateSpeed()
+    {
+        Speed=normalSpeed*PlayerStatsManager.speedMultipliyer;
+    }
+
 #region SeekMovement
 
     public void OnClickMove(InputAction.CallbackContext context)

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8583504209767689248}
   - component: {fileID: 2758397309830872739}
+  - component: {fileID: -1007659449061351495}
   m_Layer: 0
   m_Name: Pound
   m_TagString: Untagged
@@ -92,6 +93,19 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!210 &-1007659449061351495
+SortingGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5603483027411361171}
+  m_Enabled: 1
+  m_SortingLayerID: -2093274059
+  m_SortingLayer: -1
+  m_SortingOrder: 0
+  m_SortAtRoot: 0
+  m_Sort3DAs2D: 0
 --- !u!1001 &996202644124783161
 PrefabInstance:
   m_ObjectHideFlags: 0

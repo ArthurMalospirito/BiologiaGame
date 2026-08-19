@@ -27,8 +27,8 @@ public class GeneTherapyUpgrade : MonoBehaviour
             return;
         }
         playerHealthController.UpdateStats();
-        playerHealthController.AddHealth(1000);
         healthBar.GrowBar(0.1f);
+        playerHealthController.AddHealth(1000);
         CloseSelf();
     }
 
@@ -64,6 +64,14 @@ public class GeneTherapyUpgrade : MonoBehaviour
 
     public void OnSpeedUpgrade()
     {
-        //A fazer
+        PlayerStatsManager.speedMultipliyer+=0.1f;
+        var playerMovement = player.GetComponent<PlayerMovement>();
+        if (playerMovement==null)
+        {
+            Debug.LogError("Não tem PlayerMovement no Player");
+            return;
+        }
+        playerMovement.UpdateSpeed();
+        CloseSelf();
     }
 }

@@ -1,16 +1,16 @@
+using Enums.EnumBiomes;
 using Enums.Genotypes;
 using UnityEngine;
 
 [CreateAssetMenu(menuName ="Traits/Trait/ColorTrait")]
 public class ColorTrait : Trait
 {
-    [SerializeField]private CreatureData creatureData;
     [SerializeField]private Color colorHomoDominant = Color.brown;
-    [SerializeField]private float homoDominantDetectionMultipliyer=0.8f;
+    [SerializeField]private Biomes homoDominantBiomeColorBuff=Biomes.Desert;
     [SerializeField]private Color colorHetero = Color.beige;
-    [SerializeField]private float heteroDetectionMultipliyer=1f;
+    [SerializeField]private Biomes heteroBiomeColorBuff=Biomes.Florest;
     [SerializeField]private Color colorHomoRecessive = Color.white;
-    [SerializeField]private float homoRecessiveDetectionMultipliyer=1.2f;
+    [SerializeField]private Biomes homoRecessiveBiomeColorBuff=Biomes.None;
 
     public override void Apply(GameObject target,Gene gene)
     {
@@ -37,20 +37,14 @@ public class ColorTrait : Trait
         }
 
         if (!target.CompareTag("Player")) return;
-        if (creatureData==null)
-        {
-            Debug.Log("Sem creatureData");
-            return;
-        }
-        float newDetectionMultipliyer= gene.Genotype switch
-        {
-            Genotypes.HomoDominant => homoDominantDetectionMultipliyer,
-            Genotypes.Hetero => heteroDetectionMultipliyer,
-            Genotypes.HomoRecessive => homoRecessiveDetectionMultipliyer,
-            _ => heteroDetectionMultipliyer
-        };
 
-        creatureData.SetDetectionMultipliyer(newDetectionMultipliyer);
+        PlayerStatsManager.biomeColorBuff = gene.Genotype switch
+        {
+            Genotypes.HomoDominant => homoDominantBiomeColorBuff,
+            Genotypes.Hetero => heteroBiomeColorBuff,
+            Genotypes.HomoRecessive => homoRecessiveBiomeColorBuff,
+            _ => heteroBiomeColorBuff
+        };
             
     }
 }

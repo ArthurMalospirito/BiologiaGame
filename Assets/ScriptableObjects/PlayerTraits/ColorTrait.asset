@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: ColorTrait
   m_EditorClassIdentifier: Assembly-CSharp::ColorTrait
   traitType: 2
-  creatureData: {fileID: 11400000, guid: 2468f1a4b536c15418a2e848142ca594, type: 2}
-  colorHomoDominant: {r: 0.37254903, g: 0.37254903, b: 0.37254903, a: 1}
-  homoDominantDetectionMultipliyer: 0.8
-  colorHetero: {r: 0.6862745, g: 0.6862745, b: 0.6862745, a: 1}
-  heteroDetectionMultipliyer: 1
+  colorHomoDominant: {r: 1, g: 0.7866211, b: 0.3537736, a: 1}
+  homoDominantBiomeColorBuff: 2
+  colorHetero: {r: 0.25539163, g: 0.7075472, b: 0.23028658, a: 1}
+  heteroBiomeColorBuff: 1
   colorHomoRecessive: {r: 1, g: 1, b: 1, a: 1}
-  homoRecessiveDetectionMultipliyer: 1.2
+  homoRecessiveBiomeColorBuff: 0
