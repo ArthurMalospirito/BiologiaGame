@@ -3681,10 +3681,6 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 1155756252187516393, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
-      propertyPath: creatureData
-      value: 
-      objectReference: {fileID: 11400000, guid: 2468f1a4b536c15418a2e848142ca594, type: 2}
     - target: {fileID: 2616149431652764877, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -3749,6 +3745,14 @@ PrefabInstance:
       propertyPath: m_ActionEvents.Array.data[4].m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5615042056729325511, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+      propertyPath: healthBar
+      value: 
+      objectReference: {fileID: 1187290858}
+    - target: {fileID: 5615042056729325511, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+      propertyPath: diseaseIndicator
+      value: 
+      objectReference: {fileID: 7879412757262158615}
     - target: {fileID: 7173731165316403849, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: hasParents
       value: 0
@@ -4298,6 +4302,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+--- !u!1 &7879412757262158615 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3795246406959162782, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+  m_PrefabInstance: {fileID: 7879412757262158614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

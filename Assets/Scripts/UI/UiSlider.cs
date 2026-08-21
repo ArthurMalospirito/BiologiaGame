@@ -25,9 +25,15 @@ public class UiSlider : MonoBehaviour
     /// Função que aumenta tamanho da barra de UI
     /// </summary>
     /// <param name="resizeFactor">Valor de 0,1 = +10% de barra</param>
-    public void GrowBar(float resizeFactor)
+    public void GrowBar(float resizeFactor,bool totalBar)
     {
-        barWidth+=initialBarWidth*resizeFactor;
+        if (totalBar)
+        {
+            barWidth*=resizeFactor;
+        } else
+        {  
+            barWidth+=initialBarWidth*resizeFactor;
+        }
         rectTransform.sizeDelta=new Vector2(barWidth,initialBarHeight);
     }
     public void SetFill(float amount, float totalAmount)

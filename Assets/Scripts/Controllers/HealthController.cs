@@ -64,6 +64,8 @@ public class HealthController : MonoBehaviour
     public void UpdateStats()
     {
         maxHealth=initialMaxHealth*PlayerStatsManager.healthMultipliyer;
+        if (health>maxHealth)
+            health=maxHealth;
     }
 
     public void AddHealth(float value)

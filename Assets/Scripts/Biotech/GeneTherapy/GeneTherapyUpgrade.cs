@@ -27,7 +27,7 @@ public class GeneTherapyUpgrade : MonoBehaviour
             return;
         }
         playerHealthController.UpdateStats();
-        healthBar.GrowBar(0.1f);
+        healthBar.GrowBar(0.1f,false);
         playerHealthController.AddHealth(1000);
         CloseSelf();
     }
@@ -42,7 +42,7 @@ public class GeneTherapyUpgrade : MonoBehaviour
             return;
         }
         playerResourceController.UpdateStats();
-        foodBar.GrowBar(0.1f);
+        foodBar.GrowBar(0.1f,false);
         playerResourceController.AddFood(1000);
         CloseSelf();
     }
@@ -57,7 +57,7 @@ public class GeneTherapyUpgrade : MonoBehaviour
             return;
         }
         playerResourceController.UpdateStats();
-        waterBar.GrowBar(0.1f);
+        waterBar.GrowBar(0.1f,false);
         playerResourceController.AddWater(1000);
         CloseSelf();
     }

@@ -11,6 +11,8 @@ public class PlayerStatsManager : MonoBehaviour
     [SerializeField] private CreatureData creatureData;
     public event Action<FoodID, int> OnFoodCountChanged;
     private Dictionary<FoodID, int> foodCounts = new Dictionary<FoodID, int>();
+    private DiseaseController diseaseController;
+
     public static float healthMultipliyer=1;
     public static float foodMultipliyer=1;
     public static float waterMultipliyer=1;
@@ -28,6 +30,11 @@ public class PlayerStatsManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Start()
+    {
+        diseaseController=GetComponent<DiseaseController>();
+    }
+
     public void AddFood(FoodID type)
     {
         if (!foodCounts.ContainsKey(type))
@@ -35,6 +42,8 @@ public class PlayerStatsManager : MonoBehaviour
 
         foodCounts[type]++;
         OnFoodCountChanged?.Invoke(type, foodCounts[type]);
+
+        diseaseController.OnEat();
     }
     public void SetFood(FoodID type,int amount)
     {

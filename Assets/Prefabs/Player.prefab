@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 2722111536133634124}
   - component: {fileID: 8994679511183302148}
   - component: {fileID: 7173731165316403849}
+  - component: {fileID: 5615042056729325511}
   - component: {fileID: 1155756252187516393}
   - component: {fileID: 2221544936485156439}
   - component: {fileID: 1682768008863463623}
@@ -255,7 +256,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3a759402e4307149bd8ca8a247d8327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::HealthManager
-  maxHealth: 100
+  initialMaxHealth: 100
   healthBar: {fileID: 0}
   resetUi: {fileID: 0}
   blinkingTime: 1.5
@@ -272,13 +273,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceController
   damageWithZeroResource: 2
-  needXP: 50
-  XpBar: {fileID: 0}
   <CanEatType>k__BackingField: 0
-  maxFood: 100
+  initialMaxFood: 100
   foodLooseAmount: 1
   FoodBar: {fileID: 0}
-  maxWater: 100
+  initialMaxWater: 100
   waterLooseAmount: 1
   WaterBar: {fileID: 0}
 --- !u!114 &7173731165316403849
@@ -299,6 +298,19 @@ MonoBehaviour:
   genes: []
   TraitList: {fileID: 11400000, guid: 936d55e3dcbf5fe418019509d40611a6, type: 2}
   UIGenesController: {fileID: 0}
+--- !u!114 &5615042056729325511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25050283671965925}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9acc8265733985409701d6164eada20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DiseaseController
+  healthBar: {fileID: 0}
 --- !u!114 &1155756252187516393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -311,6 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7223f4c3713b7944996ca7604086c29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStatsManager
+  creatureData: {fileID: 11400000, guid: 2468f1a4b536c15418a2e848142ca594, type: 2}
 --- !u!70 &2221544936485156439
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
