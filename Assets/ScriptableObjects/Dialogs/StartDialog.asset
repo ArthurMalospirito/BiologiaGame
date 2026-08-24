@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c39b8abcb479d25eabfd80f0dec0055, type: 3}
+  m_Name: StartDialog
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  dialogueTrigger: 0
+  lines:
+  - "Ol\xE1! Eu sou Charles Darwin, o inventor da teoria evolutiva que \xE9 utilizada
+    at\xE9 hoje. "
+  - 'Irei apresentar seu objetivo:'
+  - "Assim como toda a vida, seu objetivo \xE9\u2026 Sobreviver! "
+  - "Por\xE9m, toda vida possui necessidades b\xE1sicas."
+  - "Nesse caso, voc\xEA, como um tentilh\xE3o, precisa de <b><color=#B0884B>COMIDA</color></b>
+    e <b><color=#7373FF>\xC1GUA</color></b>."
+  - "Como voc\xEA possui um bico fino, voc\xEA pode se alimentar de pequenos animais."
+  - Procure formigas ou minhocas para se alimentar.

@@ -144,7 +144,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ide.visualstudio": {
-      "version": "2.0.27",
+      "version": "2.0.28",
       "depth": 0,
       "source": "registry",
       "dependencies": {
@@ -241,7 +241,7 @@
       }
     },
     "com.unity.test-framework.performance": {
-      "version": "3.2.0",
+      "version": "3.3.0",
       "depth": 2,
       "source": "registry",
       "dependencies": {

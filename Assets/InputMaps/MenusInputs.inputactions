@@ -69,6 +69,34 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "DarwinMenu",
+            "id": "1cc03d74-f2f4-482b-afab-c8e1eff369e0",
+            "actions": [
+                {
+                    "name": "Click",
+                    "type": "Button",
+                    "id": "485599de-3ded-4e95-9c52-4566764760f9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8baf6357-4aef-421b-9965-a220e907da4d",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Click",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
