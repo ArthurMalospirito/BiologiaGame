@@ -35,6 +35,7 @@ public class Creature : MonoBehaviour
         movement = GetComponent<Movement>();
         spin = GetComponent<Spin>();
         damage = GetComponentInChildren<Damage>();
+        
     }
     private void Start()
     {
@@ -42,6 +43,11 @@ public class Creature : MonoBehaviour
         if (agressive)
         {
             damage.enabled=true;
+        }
+
+        if (nest==null)
+        {
+            nest = GetComponentInParent<Nest>();
         }
     }
     private void Update()

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 857c66d044cdb5c4596fdc619614db90
+guid: 3ca3ee99ec1fb9b6d92cb277eb56a877
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8320102380781528936
-    second: ant_0
+      213: 2668934810670112223
+    second: GalapagosSimulator_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ant_0
+      name: GalapagosSimulator_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 2
-        width: 59
-        height: 61
+        x: 127
+        y: 137
+        width: 2102
+        height: 758
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89892aa67fe098c80800000000000000
-      internalID: -8320102380781528936
+      spriteID: fdd9aa6d116f90520800000000000000
+      internalID: 2668934810670112223
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ant_0: -8320102380781528936
+      GalapagosSimulator_0: 2668934810670112223
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
