@@ -105,8 +105,8 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2890217995453986867}
   m_Enabled: 1
-  m_SortingLayerID: -881374049
-  m_SortingLayer: 1
+  m_SortingLayerID: -2093274059
+  m_SortingLayer: -1
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ProximityActivator
   resourceData: {fileID: 11400000, guid: f5ddf7a4328345543b12b8db7e9b67fa, type: 2}
-  activateRadius: 0
   targetComponent: {fileID: 3365200966018520632}
 --- !u!70 &4343543830822678391
 CapsuleCollider2D:

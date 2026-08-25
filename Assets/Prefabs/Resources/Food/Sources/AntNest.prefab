@@ -56,6 +56,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1987162108943894297, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987162108943894297, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -2093274059
+      objectReference: {fileID: 0}
     - target: {fileID: 2890217995453986867, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_Name
       value: AntNest
@@ -64,6 +72,10 @@ PrefabInstance:
       propertyPath: food
       value: 
       objectReference: {fileID: 7357171046606262815, guid: 7089962f757b4734e9daccbf14f3a009, type: 3}
+    - target: {fileID: 3365200966018520632, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
+      propertyPath: foodID
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3365200966018520632, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: foodLimit
       value: 4
@@ -78,11 +90,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4343543830822678391, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_Size.x
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4343543830822678391, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_Size.y
-      value: 0.5
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7427941302673378803, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_Sprite

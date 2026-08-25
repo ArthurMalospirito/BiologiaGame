@@ -75,6 +75,8 @@ public class RightMenuController : MonoBehaviour
 
         Transform transform = hit.collider.transform;
         rightMenu.transformLocation = transform;
+
+        rightMenu.Open();
         
     }
 

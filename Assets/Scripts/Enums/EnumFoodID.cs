@@ -6,7 +6,8 @@ namespace Enums.EnumFoodID
     public enum FoodID
     {
         Coconut,
-        Worm
+        Worm,
+        Ant
     }
 }
 

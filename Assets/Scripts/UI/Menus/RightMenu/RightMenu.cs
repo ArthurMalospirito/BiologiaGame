@@ -1,5 +1,7 @@
 
 
+using System.Linq;
+using Enums.Traits;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,6 +17,7 @@ public class RightMenu : MonoBehaviour
     [SerializeField] private ChildMenuController childMenuController;
     [SerializeField] private TMP_Text procreateCooldownText;
     [SerializeField] private Button procreateButton;
+    [SerializeField] private TMP_Text sameSexText;
     public static bool canProcreate=true;
     public static int procreateCooldown=0;
     private void Awake()
@@ -24,7 +27,7 @@ public class RightMenu : MonoBehaviour
         childMenuController = GetComponentInParent<ChildMenuController>();
     }
 
-    private void OnEnable()
+    public void Open()
     {
         SetProcreate(canProcreate);
         SetProcreateCooldown(procreateCooldown);
@@ -69,13 +72,30 @@ public class RightMenu : MonoBehaviour
 
     private void SetProcreate(bool status)
     {
-        if (status==true)
+        var targetTailGene = targetGeneticController.genes.FirstOrDefault(gene => gene.traitType==Traits.tail);
+        if (targetTailGene==null)
         {
-            procreateButton.interactable=true;
-        } else
+            Debug.LogError("Erro ao encontrar o gene de rabo no Alvo");
+        }
+        var playerGeneticController = player.GetComponent<GeneticController>();
+        if (playerGeneticController==null)
+        {
+            Debug.LogError("Erro ao encontrar playeGeneticController");
+        }
+        var playerTailGene = playerGeneticController.genes.FirstOrDefault(gene => gene.traitType==Traits.tail);
+        if (playerTailGene == null)
+        {
+            Debug.LogError("Erro ao encontrar trait de rabo do player");
+        }
+        bool sameSex =targetTailGene.Genotype==playerTailGene.Genotype;
+        if (sameSex)
         {
             procreateButton.interactable=false;
+            sameSexText.text="Esse passáro é do mesmo sexo que você.";
+            return;
         }
+        sameSexText.text="";
+        procreateButton.interactable=status;
     }
 
 }

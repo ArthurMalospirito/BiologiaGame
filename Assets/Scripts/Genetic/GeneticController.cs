@@ -106,7 +106,14 @@ public class GeneticController : MonoBehaviour
             } 
             if (exclude) continue;
             List<Genotypes> values = new List<Genotypes>((Genotypes[])Enum.GetValues(typeof(Genotypes)));
-            Genotypes randomGenotype = values[UnityEngine.Random.Range(0,values.Count)];
+            Genotypes randomGenotype =Genotypes.Hetero;
+            if (gene.traitType == Traits.tail)
+            {
+                randomGenotype = values[UnityEngine.Random.Range(1,values.Count)];
+            } else
+            {
+                randomGenotype = values[UnityEngine.Random.Range(0,values.Count)]; 
+            }
             gene.Genotype=randomGenotype;
         }
     }
