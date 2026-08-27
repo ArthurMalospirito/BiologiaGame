@@ -7,7 +7,8 @@ namespace Enums.EnumFoodID
     {
         Coconut,
         Worm,
-        Ant
+        Ant,
+        Cactus
     }
 }
 

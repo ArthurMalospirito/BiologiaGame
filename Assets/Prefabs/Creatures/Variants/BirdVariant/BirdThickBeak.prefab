@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2531963444325935750, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_Name
-      value: Bird
+      value: BirdThickBeak
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -51,6 +51,18 @@ PrefabInstance:
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842132847699362038, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842132847699362038, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2842132847699362038, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
+      propertyPath: m_Color.r
+      value: 0.023534894
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

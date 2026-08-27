@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: TailTrait
   m_EditorClassIdentifier: Assembly-CSharp::TailTrait
   traitType: 1
-  spriteHomoDominant: {fileID: 21300000, guid: b4a458bf9a3235c4ab6c8b87c87d5819, type: 3}
+  spriteHomoDominant: {fileID: 0}
   spriteHetero: {fileID: 21300000, guid: b4a458bf9a3235c4ab6c8b87c87d5819, type: 3}
   spriteHomoRecessive: {fileID: 21300000, guid: 3a7193cba9af94e4882bc24be73dcd2d, type: 3}
