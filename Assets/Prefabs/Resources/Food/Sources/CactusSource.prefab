@@ -68,7 +68,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1.8, y: 1.8}
   m_Direction: 0
 --- !u!114 &8059039373398235884
 MonoBehaviour:
@@ -97,11 +97,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1461279655224804078, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1461279655224804078, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1461279655224804078, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -160,16 +160,20 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3365200966018520632, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
+      propertyPath: pushForce
+      value: 650
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365200966018520632, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: spawnCooldown
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4343543830822678391, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_Size.x
-      value: 0.4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4343543830822678391, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_Size.y
-      value: 0.4
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7427941302673378803, guid: 07ebeb0d9b31db649b9c0afd2263e7f4, type: 3}
       propertyPath: m_Sprite
