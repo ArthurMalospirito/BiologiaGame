@@ -36,6 +36,11 @@ public class PlayerMovement : MonoBehaviour
         Speed=normalSpeed;
     }
 
+    private void Start()
+    {
+        currentMovementType = Application.isMobilePlatform ? MovementType.EightDirection : MovementType.SeekMouse;
+    }
+
     private void FixedUpdate()
     {
         Move();

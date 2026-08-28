@@ -17,10 +17,14 @@ public class UiController : MonoBehaviour
     {
         if (context.started)
         {
+            SwitchTabMenu();
+        }
+    }
+    public void SwitchTabMenu()
+    {
             tabMenuActive= tabMenuActive ? false : true;
             gameManager.SetPause(tabMenuActive);
             TabMenu.SetActive(tabMenuActive);
-        }
     }
 
 }

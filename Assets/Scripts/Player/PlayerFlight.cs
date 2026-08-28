@@ -30,16 +30,15 @@ public class PlayerFlight : MonoBehaviour
 
     public void OnFlight(InputAction.CallbackContext callbackContext)
     {
-        if (!canFly) return;
-
         if (callbackContext.performed)
         {
             Fly();
         }
     }
 
-    private void Fly()
+    public void Fly()
     {
+        if (!canFly) return;
         if (isFlying) return;
         _flightCorotuine = StartCoroutine(FlightCoroutine(flightTime));
     }

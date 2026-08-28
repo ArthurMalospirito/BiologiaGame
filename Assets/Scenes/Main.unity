@@ -4370,6 +4370,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a3f0101bbf39d04296cadef7a527330, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GeneticController
+--- !u!114 &1489376652 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8525999558510869849, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+  m_PrefabInstance: {fileID: 2054148844}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 446a70c3bc13af548a607dec400d6540, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFlight
 --- !u!1001 &1514624594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4619,6 +4630,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5225454948512306733, guid: 518aabf718060094983a86fb724eec3b, type: 3}
   m_PrefabInstance: {fileID: 1531159792}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1536019462 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7319803762291603589, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+  m_PrefabInstance: {fileID: 7879412757262158614}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1536019464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1536019462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c73245a7016e50a91aff4e2d27e07d91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowOnMobile
 --- !u!1001 &1564407813
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6224,6 +6252,10 @@ PrefabInstance:
       propertyPath: genes.Array.data[3].traitType
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8399443887617744757, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+      propertyPath: currentMovementType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8525999558510869849, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
       propertyPath: uICooldown
       value: 
@@ -7028,6 +7060,10 @@ PrefabInstance:
       propertyPath: black
       value: 
       objectReference: {fileID: 1170705020}
+    - target: {fileID: 5098006579288707597, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5210089248758758518, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7124,6 +7160,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6857027145289294232, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1489376652}
+    - target: {fileID: 6857027145289294232, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Fly
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857027145289294232, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerFlight, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6857027145289294232, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6872416492180242528, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7140,6 +7192,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1721767644}
+    - target: {fileID: 7319803762291603589, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8015924289495551226, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -7151,6 +7207,14 @@ PrefabInstance:
     - target: {fileID: 8015924289495551226, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125308952924086027, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_Name
+      value: FlyButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8125308952924086027, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8398003526116874895, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_Color.a
@@ -7171,7 +7235,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7319803762291603589, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1536019464}
   m_SourcePrefab: {fileID: 100100000, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
 --- !u!1 &7879412757262158615 stripped
 GameObject:
