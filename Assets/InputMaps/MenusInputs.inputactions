@@ -60,7 +60,7 @@
                 {
                     "name": "",
                     "id": "3b431832-5921-42b2-8a8f-b41656b9aad4",
-                    "path": "<Touchscreen>/Press",
+                    "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -121,7 +121,7 @@
                 {
                     "name": "",
                     "id": "3f008713-e4fd-4b12-a457-96496af3c6f1",
-                    "path": "<Touchscreen>/Press",
+                    "path": "<Touchscreen>/primaryTouch/tap",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -13,6 +13,7 @@ public class RightMenuController : MonoBehaviour
     [SerializeField] private string targetTag="Bird";
     [SerializeField] private string dontCloseTag="Menu";
     [SerializeField] private int procreateCooldown=90;
+    private bool _justOpened = false;
 
     public void OnRightClick(InputAction.CallbackContext callbackContext)
     {
@@ -31,6 +32,7 @@ public class RightMenuController : MonoBehaviour
     {
         if (callbackContext.performed)
         {
+            if (_justOpened) return;
             VerifyHit();
         }
     }
@@ -39,7 +41,7 @@ public class RightMenuController : MonoBehaviour
     {
         if (IsMouseOverTag(dontCloseTag)) return new RaycastHit2D();
 
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        Vector2 mousePosition = GetPointerPosition();
         Vector2 mouseWorld = Camera.main.ScreenToWorldPoint(mousePosition);
         RaycastHit2D hit = Physics2D.Raycast(mouseWorld,Vector2.zero);
         if (hit.collider == null || !hit.collider.gameObject.CompareTag(dontCloseTag))
@@ -55,7 +57,7 @@ public class RightMenuController : MonoBehaviour
         {
             Destroy(rightMenu.gameObject);
         } 
-        Vector2 mousePosition = Mouse.current.position.ReadValue();
+        Vector2 mousePosition = GetPointerPosition();
         rightMenu = Instantiate(rightMenuPrefab,mousePosition,Quaternion.identity,gameObject.transform);
 
         GeneticController geneticController = hit.collider.GetComponent<GeneticController>();
@@ -77,7 +79,15 @@ public class RightMenuController : MonoBehaviour
         rightMenu.transformLocation = transform;
 
         rightMenu.Open();
+        _justOpened=true;
+        StartCoroutine(ResetJustOpened());
         
+    }
+
+    private IEnumerator ResetJustOpened()
+    {
+        yield return new WaitForSeconds(0.5f);
+        _justOpened=false;
     }
 
     public void CloseRightMenu()
@@ -89,7 +99,7 @@ public class RightMenuController : MonoBehaviour
     private bool IsMouseOverTag(string targetTag)
     {
         PointerEventData pointerData = new PointerEventData(EventSystem.current);
-        pointerData.position = Mouse.current.position.ReadValue();
+        pointerData.position = GetPointerPosition();
 
         List<RaycastResult> results = new List<RaycastResult>();
         EventSystem.current.RaycastAll(pointerData,results);
@@ -117,6 +127,17 @@ public class RightMenuController : MonoBehaviour
                 rightMenu.SetProcreateCooldown(RightMenu.procreateCooldown);
         }
         RightMenu.canProcreate=true;
+    }
+
+    private Vector2 GetPointerPosition()
+    {
+        #if UNITY_ANDROID || UNITY_IOS
+            if (Touchscreen.current != null && Touchscreen.current.primaryTouch.press.isPressed)
+                return Touchscreen.current.primaryTouch.position.ReadValue();
+            return Vector2.zero;
+        #else
+            return Mouse.current.position.ReadValue();
+        #endif
     }
 
 }
