@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance=this;
+        Physics2D.queriesHitTriggers = false;
     }
 
     private void Start()

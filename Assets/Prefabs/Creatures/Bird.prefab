@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9125492318382361076}
   m_Layer: 0
   m_Name: Eyes
-  m_TagString: Bird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 4795226140011531315}
   m_Layer: 0
   m_Name: Wing1
-  m_TagString: Bird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -313,8 +313,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_Size: {x: 0.6, y: 1.1}
+  m_Offset: {x: 0, y: -0.45}
+  m_Size: {x: 0.6, y: 0.6}
   m_Direction: 0
 --- !u!1 &2531963444325935750
 GameObject:
@@ -354,10 +354,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 8683476268062182275}
   - {fileID: 2375214350057917964}
   - {fileID: 8145546409076243700}
   - {fileID: 6398240267021366038}
-  - {fileID: 8683476268062182275}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2842132847699362038
@@ -552,8 +552,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1, y: 1}
+  m_Offset: {x: 0, y: 0.1}
+  m_Size: {x: 1, y: 1.3}
   m_Direction: 0
 --- !u!50 &6103156100488256715
 Rigidbody2D:
@@ -595,7 +595,7 @@ GameObject:
   - component: {fileID: 7426604004134278846}
   m_Layer: 0
   m_Name: Tail
-  m_TagString: Bird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -789,7 +789,7 @@ GameObject:
   - component: {fileID: 6398240267021366038}
   m_Layer: 0
   m_Name: Wings
-  m_TagString: Bird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -915,7 +915,7 @@ GameObject:
   - component: {fileID: 1176156689916482564}
   m_Layer: 0
   m_Name: Wing2
-  m_TagString: Bird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1020,7 +1020,7 @@ GameObject:
   - component: {fileID: 8655439318921824984}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Bird
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
