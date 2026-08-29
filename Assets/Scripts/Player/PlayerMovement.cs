@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using Enums.EnumMovementType;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,12 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float dragForce=5f;
 
-    public enum MovementType
-    {
-        SeekMouse,
-        EightDirection
-    }
-    public MovementType currentMovementType = MovementType.SeekMouse;
+    public static MovementType currentMovementType = MovementType.EightDirection;
 
     private Rigidbody2D rb;
     private Camera cam;
@@ -35,19 +31,31 @@ public class PlayerMovement : MonoBehaviour
         cam = Camera.main;
         Speed=normalSpeed;
     }
-
-    private void Start()
+    private void Update()
     {
-        currentMovementType = Application.isMobilePlatform ? MovementType.EightDirection : MovementType.SeekMouse;
+        // lê o stick virtual diretamente
+        if (Gamepad.current != null)
+        {
+            Vector2 stickValue = Gamepad.current.leftStick.ReadValue();
+            if (currentMovementType == MovementType.EightDirection)
+            {
+                if (stickValue.magnitude > 0.1f)
+                {
+                    isMoving = true;
+                    Direction = stickValue;
+                }
+                else
+                {
+                    isMoving = false;
+                    Direction = Vector2.zero;
+                }
+            }
+        }
     }
-
     private void FixedUpdate()
     {
         Move();
     }
-
-
-
     private void Move()
     {
         if (!canMove)

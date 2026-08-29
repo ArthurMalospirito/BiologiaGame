@@ -177,6 +177,17 @@
                     "action": "Flight",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9165be7e-1f6b-4ac2-93c4-ca985b65c32c",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Flight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }

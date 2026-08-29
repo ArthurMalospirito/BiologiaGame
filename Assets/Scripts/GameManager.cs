@@ -1,3 +1,8 @@
+#if UNITY_EDITOR
+    using UnityEditor;
+#endif
+
+using Enums.EnumMovementType;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +14,15 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance=this;
+    }
+
+    private void Start()
+    {
+        #if UNITY_EDITOR
+            PlayerMovement.currentMovementType = EditorUserBuildSettings.activeBuildTarget==BuildTarget.Android ? MovementType.EightDirection : MovementType.SeekMouse;
+        #else 
+            PlayerMovement.currentMovementType=Application.isMobilePlatform ? MovementType.EightDirection : MovementType.SeekMouse;
+        #endif
     }
 
     public void SetPause(bool pauseState)

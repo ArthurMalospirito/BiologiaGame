@@ -225,7 +225,6 @@ MonoBehaviour:
   normalSpeed: 4
   canMove: 1
   dragForce: 5
-  currentMovementType: 0
   dontMoveTag: Menu
 --- !u!114 &8525999558510869849
 MonoBehaviour:
@@ -310,7 +309,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9acc8265733985409701d6164eada20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiseaseController
+  diseaseIndicator: {fileID: 0}
   healthBar: {fileID: 0}
+  percentageToDisease: 0.1
 --- !u!114 &1155756252187516393
 MonoBehaviour:
   m_ObjectHideFlags: 0

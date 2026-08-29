@@ -7107,6 +7107,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UI
       objectReference: {fileID: 0}
+    - target: {fileID: 277455641398119835, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ControlPath
+      value: <Gamepad>/leftStick
+      objectReference: {fileID: 0}
     - target: {fileID: 2309140122494406995, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -7155,6 +7159,22 @@ PrefabInstance:
       propertyPath: black
       value: 
       objectReference: {fileID: 1170705020}
+    - target: {fileID: 4592447076808430329, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_ControlPath
+      value: <Gamepad>/leftStick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883968815783380770, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883968815783380770, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883968815783380770, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5098006579288707597, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -7259,6 +7279,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5645518626507223628, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6857027145289294232, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -7331,7 +7355,9 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
