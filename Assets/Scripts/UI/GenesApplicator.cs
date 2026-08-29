@@ -9,13 +9,25 @@ public class GenesApplicator : MonoBehaviour
 
     private void ApplyGene(Traits traitType, int value)
     {
-        Genotypes newGenotype = value switch
+        Genotypes newGenotype = Genotypes.Hetero;
+        if (traitType==Traits.tail)
         {
-            0 => Genotypes.HomoDominant,
-            1 => Genotypes.Hetero,
-            2 => Genotypes.HomoRecessive,
-            _ => Genotypes.Hetero
-        };
+            newGenotype = value switch
+            {
+                0 => Genotypes.Hetero,
+                1 => Genotypes.HomoRecessive,
+                _ => Genotypes.Hetero
+            };
+        } else
+        {
+            newGenotype = value switch
+            {
+                0 => Genotypes.HomoDominant,
+                1 => Genotypes.Hetero,
+                2 => Genotypes.HomoRecessive,
+                _ => Genotypes.Hetero
+            };
+        }
 
         Gene gene = geneticController.genes.Find(x => x.traitType==traitType);
         if (gene==null) 

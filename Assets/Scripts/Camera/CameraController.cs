@@ -9,7 +9,7 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-        Screen.SetResolution(1920, 1080, FullScreenMode.Windowed);
+        Screen.SetResolution(targetWidth, targetHeight, FullScreenMode.Windowed);
         StartCoroutine(EnforceNextFrame());
     }
 

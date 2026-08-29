@@ -17,6 +17,11 @@ public class GameManager : MonoBehaviour
         Time.timeScale= pauseState ? 0f : 1f;
     }
 
+    public void OpenStartMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+    }
+
     public void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);

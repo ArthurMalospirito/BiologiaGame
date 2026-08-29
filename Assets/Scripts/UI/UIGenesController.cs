@@ -59,6 +59,16 @@ public class UIGenesController : MonoBehaviour
 
     private void SetDropdown(TMP_Dropdown dropdown, Gene gene)
     {
+        if (gene.traitType==Traits.tail)
+        {
+            dropdown.value = gene.Genotype switch
+            {
+                Genotypes.Hetero => 0,
+                Genotypes.HomoRecessive => 1,
+                _ => 0
+            };
+            return;
+        }
         dropdown.value = gene.Genotype switch
         {
             Genotypes.HomoDominant => 0,
