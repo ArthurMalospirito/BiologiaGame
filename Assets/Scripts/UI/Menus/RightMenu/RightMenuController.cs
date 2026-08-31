@@ -33,6 +33,7 @@ public class RightMenuController : MonoBehaviour
         if (callbackContext.performed)
         {
             if (_justOpened) return;
+            if (IsPointerOverUI()) return;
             VerifyHit();
         }
     }
@@ -137,6 +138,18 @@ public class RightMenuController : MonoBehaviour
             return Vector2.zero;
         #else
             return Mouse.current.position.ReadValue();
+        #endif
+    }
+
+    private bool IsPointerOverUI()
+    {
+        #if UNITY_ANDROID || UNITY_IOS
+            if (Input.touchCount > 0)
+                return EventSystem.current
+                    .IsPointerOverGameObject(Input.GetTouch(0).fingerId);
+            return false;
+        #else
+            return EventSystem.current.IsPointerOverGameObject();
         #endif
     }
 

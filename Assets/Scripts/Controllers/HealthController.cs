@@ -43,6 +43,7 @@ public class HealthController : MonoBehaviour
         anim.SetTrigger("damage");
         StartCoroutine(BlinkingCoroutine());
         healthBar.SetFill(health,maxHealth);
+        SendMessage("OnDamage",SendMessageOptions.DontRequireReceiver);
     }
 
     private void Die()

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c39b8abcb479d25eabfd80f0dec0055, type: 3}
+  m_Name: FirstProcreate
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  dialogueTrigger: 5
+  lines:
+  - "Ei! Parab\xE9ns pela crian\xE7a."
+  - "Voc\xEA viu como ela parece com ambos os pais?"
+  - Se quiser que eu te explique melhor como isso funciona, tente ter outra!
+  - "<i>(Voc\xEA tamb\xE9m pode abrir o menu a ver a explica\xE7\xE3o em XXXXXXX)</i>"
+  - "Ou, se preferir, tamb\xE9m pode explorar um pouco o mapa!"

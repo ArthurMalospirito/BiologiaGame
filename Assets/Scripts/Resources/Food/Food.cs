@@ -29,7 +29,11 @@ public class Food: MonoBehaviour
     
         ResourceController resourceController = collision.transform.GetComponent<ResourceController>();
 
-        if (resourceController.CanEatType!=foodType) return;
+        if (resourceController.CanEatType!=foodType) {
+            if (DialogController.TryTrigger(Enums.DialogueTrigger.DialogTrigger.FirstCantEat))
+                DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstCantEat);
+            return;
+        }
 
         resourceController.AddFood(foodAmount);
         resourceController.AddWater(waterAmount);

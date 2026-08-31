@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c39b8abcb479d25eabfd80f0dec0055, type: 3}
+  m_Name: FristCantEat
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  dialogueTrigger: 3
+  lines:
+  - "Os meus estudos indicam que, na verdade, a evolu\xE7\xE3o \xE9 o resultado de
+    um fen\xF4meno que eu denominei <b>\u201CSele\xE7\xE3o Natural\u201D</b>."
+  - "Dessa forma, os indiv\xEDduos com tra\xE7os que oferecem uma vantagem para sua
+    sobreviv\xEAncia no seu ambiente acabam vivendo mais tempo e, consequentemente,
+    tendo mais herdeiros."
+  - "Assim, ao longo do tempo, essas caracter\xEDsticas se tornam predominantes na
+    esp\xE9cie, tornando-a mais adaptada a um certo ambiente"
+  - "Por exemplo, se voc\xEA (um indiv\xEDduo) estivesse em uma ilha com <u>APENAS</u>
+    XXXXXX, voc\xEA morreria, enquanto outros da sua esp\xE9cie que conseguem comer
+    XXXXX sobreviveriam e teriam mais filhotes."
+  - "Isso tamb\xE9m significa que, quando um indiv\xEDduo se torna mais bem adaptado
+    a um ambiente, ele tamb\xE9m se torna menos bem adaptado \xE0 outro."
+  - "Isso significa que n\xE3o existem seres mais \u201Cevolu\xEDdos\u201D que outros,
+    apenas seres que conseguem lidar melhor com um ambiente."
+  - "Olhe em volta! Voc\xEA est\xE1 no bioma de XXXXXXX <i>(Nota: biomas n\xE3o funcionam
+    assim na vida real)</i>."
+  - "Aqui, alimentos como XXXXXXX s\xE3o abundantes, mas XXXXXXXX n\xE3o s\xE3o encontrados
+    naturalmente."
+  - "Observe os outros p\xE1ssaros aqui. "

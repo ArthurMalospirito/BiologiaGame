@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c39b8abcb479d25eabfd80f0dec0055, type: 3}
+  m_Name: FirstWater
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  dialogueTrigger: 2
+  lines:
+  - "Esse \xE9 o espirito!"
+  - "Voc\xEA conhece <b>Lamark</b>?"
+  - "Jean-Baptiste de Lamarck criou uma das mais influentes teorias da evolu\xE7\xE3o
+    (<i>Antes de mim, maldito seja!)</i>"
+  - Suas teorias afirmavam que seres vivos evoluem a partir do <u>uso e desuso</u>.
+  - "Por exemplo, se uma girafa passa sua vida tentando alcan\xE7ar frutos que est\xE3o
+    em altas \xE1rvores,"
+  - "Seu pesco\xE7o, pelo uso, iria crescer, e se um macaco n\xE3o utilizasse sua
+    cauda por muito tempo,\nEla iria atrofiar.\n"
+  - "No entanto, essa teoria j\xE1 foi grandemente negada, em grande parte gra\xE7as
+    aos meus estudos <i>(toma essa!)</i>"
+  - Ei, tente comer XXXXX.

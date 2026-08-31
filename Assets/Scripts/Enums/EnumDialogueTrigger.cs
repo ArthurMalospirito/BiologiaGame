@@ -3,9 +3,14 @@ namespace Enums.DialogueTrigger
 
     public enum DialogTrigger
     {
-        Start,
-        Food,
-        Water
+        Start, 
+        FirstEat,
+        FirstWater,
+        FirstCantEat,
+        FirstNest,
+        FirstProcreate,
+        SecondProcreate,
+        ThirdProcreate
     }
 }
 

@@ -25,6 +25,8 @@ public class RightMenu : MonoBehaviour
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
         rightMenuController = GetComponentInParent<RightMenuController>();
         childMenuController = GetComponentInParent<ChildMenuController>();
+        canProcreate=true;
+        procreateCooldown=0;
     }
 
     public void Open()
@@ -53,6 +55,25 @@ public class RightMenu : MonoBehaviour
         canProcreate=false;
         SetProcreate(false);
         rightMenuController.StartProcreateCooldown();
+
+        //Verificador de quantos procriadas.
+        if (!DialogController.VerifyTrigger(Enums.DialogueTrigger.DialogTrigger.FirstProcreate)) 
+        {
+            DialogController.SetTrigger(Enums.DialogueTrigger.DialogTrigger.FirstEat,true);
+            DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstEat);
+        }
+        else
+        {
+            if (!DialogController.VerifyTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate))
+            {
+                DialogController.SetTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate,true);
+                DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.SecondProcreate);
+            } else
+            {
+                DialogController.SetTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate,true);
+                DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate);
+            }
+        }
 
         childMenuController.SetChild(childGeneticController);
         childMenuController.OpenChildMenu();

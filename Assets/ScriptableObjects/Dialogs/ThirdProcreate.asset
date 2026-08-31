@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c39b8abcb479d25eabfd80f0dec0055, type: 3}
+  m_Name: ThirdProcreate
+  m_EditorClassIdentifier: Assembly-CSharp::DialogData
+  dialogueTrigger: 7
+  lines:
+  - "Ei, essa sele\xE7\xE3o n\xE3o est\xE1 muito \u201Cnatural\u201D, n\xE3o \xE9?"
+  - "Realmente! O processo de cruzar animais para obter caracter\xEDsticas desejadas
+    \xE9 chamado de  "
+  - "\u201CSele\xE7\xE3o artificial\u201D. N\xF3s, humanos, fazemos isso h\xE1 mil\xEAnios!\n"

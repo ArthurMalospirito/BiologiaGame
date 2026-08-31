@@ -6919,7 +6919,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4680ff4b6fd6b2f1d99462dd2752e415, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FlightButton
-  playerFlight: {fileID: 0}
 --- !u!114 &3184156860405074634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12612,7 +12611,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 300, y: 200}
+  m_AnchoredPosition: {x: 200, y: 200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!1 &5213532157227885983
@@ -17123,6 +17122,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DarwinMenuController
   allDialogs:
   - {fileID: 11400000, guid: 14aa9052e890ec859b74d67fe945111c, type: 2}
+  - {fileID: 11400000, guid: 43bb9d8e53087935f96af4e79779c9d9, type: 2}
+  - {fileID: 11400000, guid: fbe76b386748ec96b9587f048a5d90da, type: 2}
+  - {fileID: 11400000, guid: 7fc588e4c04fe1dfbbf1a8631da66edf, type: 2}
+  - {fileID: 11400000, guid: 8a7dd9a020ff5debea5605772373a0ac, type: 2}
+  - {fileID: 11400000, guid: 9ef51a0dcbab53ff1bebbbb4ed2c8922, type: 2}
+  - {fileID: 11400000, guid: 6d81ba23b50a3e0d2993a1442b356e26, type: 2}
+  - {fileID: 11400000, guid: cb76ea47bf488706bb4ce40afd33003f, type: 2}
 --- !u!1 &7192476314689291881
 GameObject:
   m_ObjectHideFlags: 0
@@ -18910,7 +18916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -350.00012, y: 249.99988}
+  m_AnchoredPosition: {x: -250, y: 250}
   m_SizeDelta: {x: 200, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &8152202569535458645

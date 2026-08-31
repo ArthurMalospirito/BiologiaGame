@@ -83,5 +83,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WaterArea
   targetTag: Player
-  waterPerTick: 0.1
+  waterPerTick: 0.2
   tickTime: 0.01
