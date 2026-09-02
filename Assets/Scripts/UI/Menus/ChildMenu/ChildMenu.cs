@@ -46,6 +46,19 @@ public class ChildMenu : MonoBehaviour
         //Deleta o filho
         Destroy(child.gameObject);
 
+        //Adicionando vida e água
+        var playerResourceController = player.GetComponent<ResourceController>();
+        if (playerResourceController!=null)
+        {
+            playerResourceController.AddFood(1000);
+            playerResourceController.AddWater(1000);
+        }
+        var playerHealthController = player.GetComponent<HealthController>();
+        if (playerHealthController!=null)
+        {
+            playerHealthController.AddHealth(1000);
+        }
+
         //Libera o player
         playerMovement.canMove=true;
         //Volta tela pro normal

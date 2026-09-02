@@ -49,7 +49,7 @@ public class PlayerFlight : MonoBehaviour
 
         if (_flightCorotuine!=null) StopCoroutine(_flightCorotuine);
         rb.linearDamping=playerMovement.dragForce;
-        playerMovement.Speed=playerMovement.normalSpeed;
+        playerMovement.Speed=playerMovement.normalSpeed*PlayerStatsManager.speedMultipliyer;
         isFlying=false;
         anim.SetBool("flying",isFlying);
         StartCoroutine(FlightCooldownCoroutine(flightCooldown));

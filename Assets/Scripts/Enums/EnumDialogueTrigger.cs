@@ -10,7 +10,9 @@ namespace Enums.DialogueTrigger
         FirstNest,
         FirstProcreate,
         SecondProcreate,
-        ThirdProcreate
+        ThirdProcreate,
+
+        SecretDialog
     }
 }
 

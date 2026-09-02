@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogData
   dialogueTrigger: 4
   lines:
+  - "Olhe esses <i>Tentilh\xF5es</i>"
   - A maioria deles possui um bico adaptado para comer XXXXXX.
   - "Isso ocorreu pelo processo de <b>Sele\xE7\xE3o Natural</b>, em que os indiv\xEDduos
     que n\xE3o conseguiam comer XXXXX acabaram morrendo, e os que conseguiam viveram

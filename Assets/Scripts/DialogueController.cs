@@ -11,23 +11,23 @@ public class DialogController : MonoBehaviour
 
     private void Awake()
     {
-        ResetAll();
+        ResetAllDialogs();
     }
-    public static bool TryTrigger(DialogTrigger trigger)
+    public static bool TryDialogTrigger(DialogTrigger trigger)
     {
         if (triggered[trigger]) return false;
         triggered[trigger] = true;
         return true;
     }
-    public static bool VerifyTrigger(DialogTrigger trigger)
+    public static bool VerifyDialogTrigger(DialogTrigger trigger)
     {
         return triggered[trigger];
     }
-    public static void SetTrigger(DialogTrigger trigger,bool value)
+    public static void SetDialogTrigger(DialogTrigger trigger,bool value)
     {
         triggered[trigger] = value;
     }
-    private void ResetAll()
+    private void ResetAllDialogs()
     {
         if (alreadyReset) return;
         foreach (DialogTrigger trigger in System.Enum.GetValues(typeof(DialogTrigger)))

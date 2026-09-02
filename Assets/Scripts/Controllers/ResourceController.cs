@@ -7,13 +7,17 @@ public class ResourceController : MonoBehaviour
     private HealthController healthController;
     [SerializeField] private int damageWithZeroResource=2;
 
+    [Header("Food")]
     private float food;
     [field: SerializeField] public FoodTypes CanEatType {get; set;}
     [SerializeField] private float initialMaxFood=100;
     private float maxFood=100;
     [SerializeField] private float foodLooseAmount=0.1f;
     [SerializeField] private  UiSlider FoodBar;
+    [SerializeField][Range(0,1)] private float percentageToRegenHealth = 0.75f;
+    [SerializeField]private float healthPerSecond = 1;
 
+    [Header("Water")]
     private float water;
     [SerializeField] private float initialMaxWater=100;
     private float maxWater=100;
@@ -30,10 +34,12 @@ public class ResourceController : MonoBehaviour
         StartCoroutine(nameof(LooseResourcesCoroutine));
         maxFood=initialMaxFood*PlayerStatsManager.foodMultipliyer;
         maxWater=initialMaxWater*PlayerStatsManager.waterMultipliyer;
+        StartCoroutine(nameof(RegenHealthCoroutine));
     }
     private void OnDisable()
     {
         StopCoroutine(nameof(LooseResourcesCoroutine));
+        StopCoroutine(nameof(RegenHealthCoroutine));
     }
     private void Start()
     {
@@ -89,6 +95,18 @@ public class ResourceController : MonoBehaviour
     {
         maxFood=initialMaxFood*PlayerStatsManager.foodMultipliyer;
         maxWater=initialMaxWater*PlayerStatsManager.waterMultipliyer;
+    }
+
+    private IEnumerator RegenHealthCoroutine()
+    {  
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            if ((food/maxFood)>percentageToRegenHealth)
+            {
+                healthController.AddHealth(healthPerSecond);
+            }
+        }
     }
 
 }

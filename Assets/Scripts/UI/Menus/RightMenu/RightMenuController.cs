@@ -14,17 +14,34 @@ public class RightMenuController : MonoBehaviour
     [SerializeField] private string dontCloseTag="Menu";
     [SerializeField] private int procreateCooldown=90;
     private bool _justOpened = false;
+    private bool _isOverUI=false;
 
+    private void Awake()
+    {
+        RightMenu.canProcreate=true;
+        RightMenu.procreateCooldown=0;
+    }
+    private void Update()
+    {
+        #if UNITY_ANDROID || UNITY_IOS
+            if (Input.touchCount > 0)
+                _isOverUI = EventSystem.current
+                    .IsPointerOverGameObject(Input.GetTouch(0).fingerId);
+            else
+                _isOverUI = false;
+        #else
+            _isOverUI = EventSystem.current.IsPointerOverGameObject();
+        #endif
+    }
     public void OnRightClick(InputAction.CallbackContext callbackContext)
     {
         if (callbackContext.performed)
         {
+            if (_isOverUI) return;
             var hit = VerifyHit();
-            if (hit.collider==null) return;
+            if (hit.collider == null) return;
             if (!hit.collider.gameObject.CompareTag(targetTag)) return;
-
             CreateRightMenu(hit);
-
         }
     }
 
@@ -32,8 +49,8 @@ public class RightMenuController : MonoBehaviour
     {
         if (callbackContext.performed)
         {
+            if (_isOverUI) return;
             if (_justOpened) return;
-            if (IsPointerOverUI()) return;
             VerifyHit();
         }
     }
@@ -94,7 +111,15 @@ public class RightMenuController : MonoBehaviour
     public void CloseRightMenu()
     {
         if (rightMenu==null) return;
+        StartCoroutine(CloseRightMenuCoroutine());
+    }
+
+    private IEnumerator CloseRightMenuCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (rightMenu==null) yield break;
         Destroy(rightMenu.gameObject);
+        rightMenu=null;
     }
 
     private bool IsMouseOverTag(string targetTag)
@@ -138,18 +163,6 @@ public class RightMenuController : MonoBehaviour
             return Vector2.zero;
         #else
             return Mouse.current.position.ReadValue();
-        #endif
-    }
-
-    private bool IsPointerOverUI()
-    {
-        #if UNITY_ANDROID || UNITY_IOS
-            if (Input.touchCount > 0)
-                return EventSystem.current
-                    .IsPointerOverGameObject(Input.GetTouch(0).fingerId);
-            return false;
-        #else
-            return EventSystem.current.IsPointerOverGameObject();
         #endif
     }
 

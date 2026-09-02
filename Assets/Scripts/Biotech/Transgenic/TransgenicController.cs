@@ -45,7 +45,7 @@ public class TransgenicController : MonoBehaviour
         transgenicButton.interactable=transgenicUses>0;
     }
 
-    private void AddUse()
+    public void AddUse()
     {
         SetTransgenicUses(transgenicUses+1);
     }

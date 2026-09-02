@@ -17,7 +17,7 @@ public class DarwinMenuController :MonoBehaviour
 
     private void Start()
     {
-        if (DialogController.TryTrigger(DialogTrigger.Start))
+        if (DialogController.TryDialogTrigger(DialogTrigger.Start))
             OpenMenu(DialogTrigger.Start);
     }
     public void OpenMenu(DialogTrigger dialogTrigger)

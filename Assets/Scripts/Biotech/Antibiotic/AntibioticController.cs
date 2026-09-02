@@ -37,7 +37,7 @@ public class AntibioticController : MonoBehaviour
         antibioticButton.interactable=antiobioticUses>0;
     }
 
-    private void AddUse()
+    public void AddUse()
     {
         SetGeneTherapyUses(antiobioticUses+1);
     }

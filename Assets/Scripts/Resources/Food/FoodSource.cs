@@ -29,7 +29,7 @@ public class FoodSource : MonoBehaviour
     {
         foodCount--;
         PlayerStatsManager.Instance.AddFood(foodID);
-        if (DialogController.TryTrigger(Enums.DialogueTrigger.DialogTrigger.FirstEat))
+        if (DialogController.TryDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstEat))
             DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstEat);
     }
 

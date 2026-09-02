@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 2668563727035384279}
   - component: {fileID: 8722859076067592842}
   - component: {fileID: 5656828948033308299}
-  - component: {fileID: 5478184170087522470}
+  - component: {fileID: 3501631489124157724}
+  - component: {fileID: 4442465728660738260}
+  - component: {fileID: 5691058578458350890}
   m_Layer: 0
-  m_Name: Spike
+  m_Name: Damage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 614851555582337126}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -129,9 +131,9 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.1, y: 1.1}
+  m_Size: {x: 0.7, y: 0.7}
   m_Direction: 0
---- !u!114 &5478184170087522470
+--- !u!114 &3501631489124157724
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -140,13 +142,54 @@ MonoBehaviour:
   m_GameObject: {fileID: 614851555582337126}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e13a5946fe5e2bc48bab9238f7ea9cbc, type: 3}
+  m_Script: {fileID: 11500000, guid: 54a591d3e9b1ad746a7758b5cfc352b6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Spike
-  targetTag: Player
-  damage: 10
-  stunTime: 0.5
-  pushForce: 200
+  m_EditorClassIdentifier: Assembly-CSharp::Nest
+  amountCreatures: 0
+  creature: {fileID: 0}
+  unaffectedTraits: 
+--- !u!114 &4442465728660738260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614851555582337126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05a6a39ac759079f8b6bcffb129a624a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SecretDamage
+  transgenicController: {fileID: 0}
+  geneTherapyController: {fileID: 0}
+  antibioticController: {fileID: 0}
+--- !u!50 &5691058578458350890
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 614851555582337126}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1490618421081261869
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,9 +200,9 @@ GameObject:
   m_Component:
   - component: {fileID: 8143706153177943830}
   - component: {fileID: 3865670575591697356}
-  - component: {fileID: 2491625524661624792}
+  - component: {fileID: 8009159530826186792}
   m_Layer: 0
-  m_Name: SpikeRigidbody
+  m_Name: DamageHitbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -210,37 +253,27 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.7, y: 0.7}
+  m_Size: {x: 1.1, y: 1.1}
   m_Direction: 0
---- !u!50 &2491625524661624792
-Rigidbody2D:
-  serializedVersion: 5
+--- !u!114 &8009159530826186792
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1490618421081261869}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e13a5946fe5e2bc48bab9238f7ea9cbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Damage
+  targetTag: Player
+  damage: 1
+  stun: 1
+  stunTime: 5
+  pushForce: 1e+20

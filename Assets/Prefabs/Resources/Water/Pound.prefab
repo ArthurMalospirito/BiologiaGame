@@ -103,7 +103,7 @@ SortingGroup:
   m_Enabled: 1
   m_SortingLayerID: -2093274059
   m_SortingLayer: -1
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
 --- !u!1001 &996202644124783161

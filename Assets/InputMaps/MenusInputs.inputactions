@@ -89,6 +89,17 @@
                     "action": "RightClick",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "f62b9f19-da54-4fbd-995c-7b5d8fbf3e25",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RightClick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },

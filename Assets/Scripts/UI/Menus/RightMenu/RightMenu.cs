@@ -25,8 +25,6 @@ public class RightMenu : MonoBehaviour
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
         rightMenuController = GetComponentInParent<RightMenuController>();
         childMenuController = GetComponentInParent<ChildMenuController>();
-        canProcreate=true;
-        procreateCooldown=0;
     }
 
     public void Open()
@@ -57,20 +55,20 @@ public class RightMenu : MonoBehaviour
         rightMenuController.StartProcreateCooldown();
 
         //Verificador de quantos procriadas.
-        if (!DialogController.VerifyTrigger(Enums.DialogueTrigger.DialogTrigger.FirstProcreate)) 
+        if (!DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstProcreate)) 
         {
-            DialogController.SetTrigger(Enums.DialogueTrigger.DialogTrigger.FirstEat,true);
-            DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstEat);
+            DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstProcreate,true);
+            DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstProcreate);
         }
         else
         {
-            if (!DialogController.VerifyTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate))
+            if (!DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate))
             {
-                DialogController.SetTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate,true);
+                DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate,true);
                 DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.SecondProcreate);
             } else
             {
-                DialogController.SetTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate,true);
+                DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate,true);
                 DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate);
             }
         }

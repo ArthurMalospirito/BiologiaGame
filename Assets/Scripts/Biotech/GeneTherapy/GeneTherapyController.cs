@@ -32,7 +32,7 @@ public class GeneTherapyController : MonoBehaviour
         geneTherapyButton.interactable=geneTherapyUses>0;
     }
 
-    private void AddUse()
+    public void AddUse()
     {
         SetGeneTherapyUses(geneTherapyUses+1);
     }
