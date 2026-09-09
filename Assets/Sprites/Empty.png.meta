@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e4ef088d5360af49b32125acb5408df
+guid: ad933ed317b17375e83ea7f3a050d0c9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7558928072860847218
-    second: wormHole_0
+      213: 8995154407686431259
+    second: Empty_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: wormHole_0
+      name: Empty_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e83b66677fa491790800000000000000
-      internalID: -7558928072860847218
+      spriteID: b1260f1864535dc70800000000000000
+      internalID: 8995154407686431259
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      wormHole_0: -7558928072860847218
+      Empty_0: 8995154407686431259
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

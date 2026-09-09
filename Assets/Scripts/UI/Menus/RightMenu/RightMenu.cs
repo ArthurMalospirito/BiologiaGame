@@ -68,8 +68,15 @@ public class RightMenu : MonoBehaviour
                 DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.SecondProcreate);
             } else
             {
-                DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate,true);
-                DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate);
+                if (!DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate))
+                {
+                    DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate,true);
+                    DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate);
+                } else
+                {
+                    DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ForthProcreate,true);
+                    DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.ForthProcreate);
+                }
             }
         }
 

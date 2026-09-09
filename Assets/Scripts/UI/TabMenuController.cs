@@ -4,12 +4,18 @@ using UnityEngine.UI;
 
 public class TabMenuController : MonoBehaviour
 {
+    [Header("Genes")]
     [SerializeField]private Button buttonGenes;
     [SerializeField]private GameObject genesContent;
+    [Header("Biotech")]
     [SerializeField]private Button buttonBiotech;
     [SerializeField]private GameObject biotechContent;
+    [Header("Config")]
     [SerializeField]private Button buttonConfig;
     [SerializeField]private GameObject configContent;
+    [Header("GeneticInfo")]
+    [SerializeField] private Button buttonGenetic;
+    [SerializeField] private GameObject geneticContent;
 
     private List<Button> ButtonList = new List<Button>();
     private List<GameObject> ContentList = new List<GameObject>();
@@ -19,10 +25,12 @@ public class TabMenuController : MonoBehaviour
         ContentList.Add(genesContent);
         ContentList.Add(biotechContent);
         ContentList.Add(configContent);
+        ContentList.Add(geneticContent);
 
         ButtonList.Add(buttonGenes);
         ButtonList.Add(buttonBiotech);
         ButtonList.Add(buttonConfig);
+        ButtonList.Add(buttonGenetic);
     }
 
     private void Start()
@@ -46,6 +54,11 @@ public class TabMenuController : MonoBehaviour
     {
         ResetMenu();
         configContent.SetActive(true);
+    }
+    public void OpenGenetic()
+    {
+        ResetMenu();
+        geneticContent.SetActive(true);
     }
 
     private void ResetMenu()

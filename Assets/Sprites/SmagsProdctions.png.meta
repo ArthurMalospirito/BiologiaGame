@@ -1,0 +1,598 @@
+fileFormatVersion: 2
+guid: 8b7e4518553a5eb269aaf6b81311b2b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1768737898988065413
+    second: SmagsProdctions_0
+  - first:
+      213: -4761165730325347870
+    second: SmagsProdctions_1
+  - first:
+      213: -463061962205348137
+    second: SmagsProdctions_2
+  - first:
+      213: -2667344168494334687
+    second: SmagsProdctions_3
+  - first:
+      213: 5860082524071680079
+    second: SmagsProdctions_4
+  - first:
+      213: 3574394795081674507
+    second: SmagsProdctions_5
+  - first:
+      213: -7327032462962772111
+    second: SmagsProdctions_6
+  - first:
+      213: -2028064040342886693
+    second: SmagsProdctions_7
+  - first:
+      213: 1158034851744952782
+    second: SmagsProdctions_8
+  - first:
+      213: 8691243114033357906
+    second: SmagsProdctions_9
+  - first:
+      213: 6576846495960700338
+    second: SmagsProdctions_10
+  - first:
+      213: -5733728892148616575
+    second: SmagsProdctions_11
+  - first:
+      213: 3014204070112734795
+    second: SmagsProdctions_12
+  - first:
+      213: -5170191335892831814
+    second: SmagsProdctions_13
+  - first:
+      213: -325872428326289185
+    second: SmagsProdctions_14
+  - first:
+      213: -8731123705135461623
+    second: SmagsProdctions_15
+  - first:
+      213: 65520026148802386
+    second: SmagsProdctions_16
+  - first:
+      213: -7018240747719501465
+    second: SmagsProdctions_17
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SmagsProdctions_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 24
+        width: 509
+        height: 509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58254f97fb1db8810800000000000000
+      internalID: 1768737898988065413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_1
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 233
+        width: 79
+        height: 108
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e1c1377ef0fcedb0800000000000000
+      internalID: -4761165730325347870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_2
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 233
+        width: 86
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de31c9499fd299f0800000000000000
+      internalID: -463061962205348137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_3
+      rect:
+        serializedVersion: 2
+        x: 1251
+        y: 233
+        width: 80
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12d7f276c90bbfad0800000000000000
+      internalID: -2667344168494334687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_4
+      rect:
+        serializedVersion: 2
+        x: 1479
+        y: 231
+        width: 56
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4854c1f102335150800000000000000
+      internalID: 5860082524071680079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_5
+      rect:
+        serializedVersion: 2
+        x: 1540
+        y: 317
+        width: 28
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0f29dfc02dca9130800000000000000
+      internalID: 3574394795081674507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_6
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 233
+        width: 121
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17739539bc6215a90800000000000000
+      internalID: -7327032462962772111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_7
+      rect:
+        serializedVersion: 2
+        x: 769
+        y: 230
+        width: 73
+        height: 82
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd66e9d108edad3e0800000000000000
+      internalID: -2028064040342886693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_8
+      rect:
+        serializedVersion: 2
+        x: 844
+        y: 199
+        width: 76
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec1b7c7ef8a221010800000000000000
+      internalID: 1158034851744952782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_9
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 233
+        width: 58
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254a484609f7d9870800000000000000
+      internalID: 8691243114033357906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_10
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 229
+        width: 93
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b5920eda07a54b50800000000000000
+      internalID: 6576846495960700338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_11
+      rect:
+        serializedVersion: 2
+        x: 1154
+        y: 225
+        width: 96
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 182761183f3bd60b0800000000000000
+      internalID: -5733728892148616575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_12
+      rect:
+        serializedVersion: 2
+        x: 1333
+        y: 233
+        width: 78
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e2b9fb1aa94d920800000000000000
+      internalID: 3014204070112734795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_13
+      rect:
+        serializedVersion: 2
+        x: 1413
+        y: 233
+        width: 66
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab13e437f5acf38b0800000000000000
+      internalID: -5170191335892831814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_14
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 233
+        width: 36
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd08483c0c44a7bf0800000000000000
+      internalID: -325872428326289185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_15
+      rect:
+        serializedVersion: 2
+        x: 1572
+        y: 233
+        width: 81
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b8869ef31d4d680800000000000000
+      internalID: -8731123705135461623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_16
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 233
+        width: 80
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25f064cdd16c8e000800000000000000
+      internalID: 65520026148802386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmagsProdctions_17
+      rect:
+        serializedVersion: 2
+        x: 1731
+        y: 233
+        width: 63
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 769d10469333a9e90800000000000000
+      internalID: -7018240747719501465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SmagsProdctions_0: 1768737898988065413
+      SmagsProdctions_1: -4761165730325347870
+      SmagsProdctions_10: 6576846495960700338
+      SmagsProdctions_11: -5733728892148616575
+      SmagsProdctions_12: 3014204070112734795
+      SmagsProdctions_13: -5170191335892831814
+      SmagsProdctions_14: -325872428326289185
+      SmagsProdctions_15: -8731123705135461623
+      SmagsProdctions_16: 65520026148802386
+      SmagsProdctions_17: -7018240747719501465
+      SmagsProdctions_2: -463061962205348137
+      SmagsProdctions_3: -2667344168494334687
+      SmagsProdctions_4: 5860082524071680079
+      SmagsProdctions_5: 3574394795081674507
+      SmagsProdctions_6: -7327032462962772111
+      SmagsProdctions_7: -2028064040342886693
+      SmagsProdctions_8: 1158034851744952782
+      SmagsProdctions_9: 8691243114033357906
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

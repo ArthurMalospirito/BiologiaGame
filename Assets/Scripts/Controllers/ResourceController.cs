@@ -5,7 +5,6 @@ using UnityEngine;
 public class ResourceController : MonoBehaviour
 {
     private HealthController healthController;
-    [SerializeField] private int damageWithZeroResource=2;
 
     [Header("Food")]
     private float food;
@@ -14,8 +13,7 @@ public class ResourceController : MonoBehaviour
     private float maxFood=100;
     [SerializeField] private float foodLooseAmount=0.1f;
     [SerializeField] private  UiSlider FoodBar;
-    [SerializeField][Range(0,1)] private float percentageToRegenHealth = 0.75f;
-    [SerializeField]private float healthPerSecond = 1;
+    [SerializeField][Range(0,1)] private float foodPercentageToRegenHealth = 0.75f;
 
     [Header("Water")]
     private float water;
@@ -23,6 +21,11 @@ public class ResourceController : MonoBehaviour
     private float maxWater=100;
     [SerializeField] private float waterLooseAmount=0.1f;
     [SerializeField] private UiSlider WaterBar;
+    [SerializeField][Range(0,1)] private float waterPercentageToRegenHealth = 0.75f;
+
+    [Header("Others")]
+    [SerializeField] private int damageWithZeroResource=2;
+    [SerializeField]private float healthPerSecond = 1;
 
     private void Awake()
     {
@@ -102,7 +105,7 @@ public class ResourceController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1f);
-            if ((food/maxFood)>percentageToRegenHealth)
+            if (((food/maxFood)>foodPercentageToRegenHealth) && ((water/maxWater)>waterPercentageToRegenHealth))
             {
                 healthController.AddHealth(healthPerSecond);
             }

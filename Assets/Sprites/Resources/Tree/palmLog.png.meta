@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 6884de7eeb7a8c44aac8da6aaf64c50a
+guid: d3043ea167a2e56c9b15ab20839e96f8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5034061168752090764
-    second: log_0
+      213: 2289342811874304662
+    second: palmLog_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -96,17 +96,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: log_0
+      name: palmLog_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 19
-        width: 30
-        height: 28
+        x: 75
+        y: 77
+        width: 100
+        height: 102
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 471a1f2e90c632ab0800000000000000
-      internalID: -5034061168752090764
+      spriteID: 692acde682165cf10800000000000000
+      internalID: 2289342811874304662
       vertices: []
       indices: 
       edges: []
@@ -135,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      log_0: -5034061168752090764
+      palmLog_0: 2289342811874304662
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

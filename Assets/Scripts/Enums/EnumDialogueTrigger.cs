@@ -11,6 +11,8 @@ namespace Enums.DialogueTrigger
         FirstProcreate,
         SecondProcreate,
         ThirdProcreate,
+        ForthProcreate,
+        UnlockBiotech,
 
         SecretDialog
     }

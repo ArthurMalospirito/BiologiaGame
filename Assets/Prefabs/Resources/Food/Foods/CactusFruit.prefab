@@ -20,6 +20,18 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 36b74274c36b953b58264b643c8fe3bd, type: 3}
+    - target: {fileID: 3984715676299256825, guid: 725829855e42cf44e8d29340f2578a2f, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984715676299256825, guid: 725829855e42cf44e8d29340f2578a2f, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3984715676299256825, guid: 725829855e42cf44e8d29340f2578a2f, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4033484959069695462, guid: 725829855e42cf44e8d29340f2578a2f, type: 3}
       propertyPath: foodType
       value: 1
