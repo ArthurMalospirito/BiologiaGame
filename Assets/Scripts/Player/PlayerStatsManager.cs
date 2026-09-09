@@ -35,6 +35,20 @@ public class PlayerStatsManager : MonoBehaviour
         diseaseController=GetComponent<DiseaseController>();
     }
 
+    private void Update()
+    {
+        if (DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.UnlockBiotech))
+            return;
+        foreach (var (foodId,value) in foodCounts)
+        {
+            if (value>=25)
+            {
+                DialogController.TryDialogTrigger(Enums.DialogueTrigger.DialogTrigger.UnlockBiotech);
+                DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.UnlockBiotech);
+            }
+        }
+    }
+
     public void AddFood(FoodID type)
     {
         if (!foodCounts.ContainsKey(type))

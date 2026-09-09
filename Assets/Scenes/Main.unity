@@ -335,11 +335,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.25
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.25
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -901,6 +901,88 @@ SortingGroup:
   m_SortingOrder: 0
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
+--- !u!1 &238905770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 238905771}
+  - component: {fileID: 238905773}
+  - component: {fileID: 238905772}
+  m_Layer: 0
+  m_Name: NestDialogTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &238905771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238905770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.35836798, w: 0.93358046}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 500092337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &238905772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238905770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283e092e47bd5e1b4adb20efbc1b4f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerNestDialog
+--- !u!70 &238905773
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 238905770}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 15, y: 5}
+  m_Direction: 0
 --- !u!4 &244320102 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1562975795184349915, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
@@ -1888,7 +1970,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1562975795184349915, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 238905771}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3020597975738533894, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
       insertIndex: 5
@@ -2582,7 +2667,7 @@ Transform:
   m_GameObject: {fileID: 691188146}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.446014, y: -11.5371275, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2635,7 +2720,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 15, y: 15}
   m_Direction: 0
 --- !u!1001 &698040236
 PrefabInstance:
@@ -2784,11 +2869,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.25
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.25
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4070,7 +4155,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 15, y: 15}
   m_Direction: 0
 --- !u!114 &1187290858 stripped
 MonoBehaviour:
@@ -5028,6 +5113,88 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 446a70c3bc13af548a607dec400d6540, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerFlight
+--- !u!1 &1506985533
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1506985534}
+  - component: {fileID: 1506985536}
+  - component: {fileID: 1506985535}
+  m_Layer: 0
+  m_Name: NestDialogTrigger (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1506985534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506985533}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.5519369, w: 0.83388585}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1880199514}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1506985535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506985533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283e092e47bd5e1b4adb20efbc1b4f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerNestDialog
+--- !u!70 &1506985536
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1506985533}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 15, y: 5}
+  m_Direction: 0
 --- !u!1001 &1514624594
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5484,7 +5651,7 @@ Transform:
   m_GameObject: {fileID: 1581758483}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.320652, y: -10.8704605, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5537,7 +5704,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 3, y: 3}
+  m_Size: {x: 15, y: 5}
   m_Direction: 0
 --- !u!1 &1602958133
 GameObject:
@@ -5931,11 +6098,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.25
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.25
+      value: 1.3333334
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6427,7 +6594,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 1562975795184349915, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1506985534}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3020597975738533894, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
       insertIndex: 5
@@ -6941,6 +7111,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1562975795184349915, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
       insertIndex: -1
       addedObject: {fileID: 749283579}
+    - targetCorrespondingSourceObject: {fileID: 1562975795184349915, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104543228}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3020597975738533894, guid: 11c6ba840d440a84ab3158a1ad817220, type: 3}
       insertIndex: 5
@@ -7293,6 +7466,88 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5225454948512306733, guid: 518aabf718060094983a86fb724eec3b, type: 3}
   m_PrefabInstance: {fileID: 630935118}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2104543227
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2104543228}
+  - component: {fileID: 2104543230}
+  - component: {fileID: 2104543229}
+  m_Layer: 0
+  m_Name: NestDialogTrigger (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2104543228
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104543227}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0.56640625, w: 0.82412624}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2023390091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2104543229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104543227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 283e092e47bd5e1b4adb20efbc1b4f6d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerNestDialog
+--- !u!70 &2104543230
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104543227}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 15, y: 5}
+  m_Direction: 0
 --- !u!1001 &2106019110
 PrefabInstance:
   m_ObjectHideFlags: 0

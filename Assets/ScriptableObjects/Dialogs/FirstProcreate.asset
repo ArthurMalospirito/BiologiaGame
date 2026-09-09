@@ -15,7 +15,9 @@ MonoBehaviour:
   dialogueTrigger: 5
   lines:
   - "Ei! Parab\xE9ns pela crian\xE7a."
+  - "Essa \xE9 a prova de um indiv\xEDduo bem sucedido evolutivamente."
   - "Voc\xEA viu como ela parece com ambos os pais?"
   - Se quiser que eu te explique melhor como isso funciona, tente ter outra!
-  - "<i>(Voc\xEA tamb\xE9m pode abrir o menu a ver a explica\xE7\xE3o em XXXXXXX)</i>"
+  - "<i>(Voc\xEA tamb\xE9m pode abrir o menu a ver a explica\xE7\xE3o em Informa\xE7\xF5es
+    gen\xE9tica)</i>"
   - "Ou, se preferir, tamb\xE9m pode explorar um pouco o mapa!"

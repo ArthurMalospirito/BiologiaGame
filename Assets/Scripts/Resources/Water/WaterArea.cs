@@ -18,6 +18,8 @@ public class WaterArea : MonoBehaviour
             return;
         }
         drinkWater = StartCoroutine(DrinkWaterCoroutine(resourceController));
+        
+        if (!DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstEat)) return;
         if (DialogController.TryDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstWater))
             DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstWater);
     }
