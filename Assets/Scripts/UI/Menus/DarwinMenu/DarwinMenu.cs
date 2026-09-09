@@ -8,7 +8,14 @@ public class DarwinMenu : MonoBehaviour
     [SerializeField] private TextMeshProUGUI dialogText;
     private string[] _lines;
     private int _currentLine = 0;
+    [Header("Audio")]
+    private AudioSource audioSource;
+    [SerializeField] SoundEffect speekAudio;
 
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
     public void StartDialog(DialogData data)
     {
         _lines=data.lines;
@@ -38,6 +45,7 @@ public class DarwinMenu : MonoBehaviour
     private void ShowLine()
     {
         dialogText.text = _lines[_currentLine];
+        audioSource.PlayOneShot(speekAudio.clip,speekAudio.volume);
     }
 
     private void Close()
