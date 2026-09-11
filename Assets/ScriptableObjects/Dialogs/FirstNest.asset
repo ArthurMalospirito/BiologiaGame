@@ -17,7 +17,7 @@ MonoBehaviour:
   - "Olhe esses <i>Tentilh\xF5es</i>"
   - "A maioria deles possui um bico adaptado para comer o alimento pr\xF3ximo a ele."
   - "Isso ocorreu pelo processo de <b>Sele\xE7\xE3o Natural</b>, em que os indiv\xEDduos
-    que n\xE3o conseguiam comer esse alimento acabaram morrendo, e os que conseguiam
-    viveram por mais tempo e tiveram mais filhos!"
+    que n\xE3o conseguiam comer esse alimento acabaram morrendo,"
+  - ' e os que conseguiam viveram por mais tempo e tiveram mais filhos!'
   - "Parab\xE9ns! Agora voc\xEA sabe os b\xE1sicos da sobreviv\xEAncia! Boa sorte!"
   - "<i>Pssst. Tente clicar em um dos p\xE1ssaros que voc\xEA viu.</i>"

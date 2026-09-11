@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using Enums.EnumMovementType;
+using UnityEditor;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float dragForce=5f;
 
-    public static MovementType currentMovementType = MovementType.EightDirection;
+    public static MovementType currentMovementType;
 
     private Rigidbody2D rb;
     private Camera cam;
@@ -30,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         rb.linearDamping = dragForce;
         cam = Camera.main;
         Speed=normalSpeed;
+
+        currentMovementType = Application.isMobilePlatform ? MovementType.EightDirection : MovementType.SeekMouse;
     }
     private void Update()
     {

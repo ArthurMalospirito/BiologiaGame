@@ -14,8 +14,14 @@ public class TabMenuController : MonoBehaviour
     [SerializeField]private Button buttonConfig;
     [SerializeField]private GameObject configContent;
     [Header("GeneticInfo")]
-    [SerializeField] private Button buttonGenetic;
-    [SerializeField] private GameObject geneticContent;
+    [SerializeField] private Button buttonGeneticInfo;
+    [SerializeField] private GameObject geneticInfoContent;
+    [Header("BiotechInfo")]
+    [SerializeField] private Button buttonBiotechInfo;
+    [SerializeField] private GameObject biotechInfoContent;
+    [Header("EvolutionInfo")]
+    [SerializeField] private Button buttonEvolutionInfo;
+    [SerializeField] private GameObject evolutionInfoContent;
 
     private List<Button> ButtonList = new List<Button>();
     private List<GameObject> ContentList = new List<GameObject>();
@@ -25,12 +31,16 @@ public class TabMenuController : MonoBehaviour
         ContentList.Add(genesContent);
         ContentList.Add(biotechContent);
         ContentList.Add(configContent);
-        ContentList.Add(geneticContent);
+        ContentList.Add(geneticInfoContent);
+        ContentList.Add(biotechInfoContent);
+        ContentList.Add(evolutionInfoContent);
 
         ButtonList.Add(buttonGenes);
         ButtonList.Add(buttonBiotech);
         ButtonList.Add(buttonConfig);
-        ButtonList.Add(buttonGenetic);
+        ButtonList.Add(buttonGeneticInfo);
+        ButtonList.Add(buttonBiotechInfo);
+        ButtonList.Add(buttonEvolutionInfo);
     }
 
     private void Start()
@@ -55,10 +65,20 @@ public class TabMenuController : MonoBehaviour
         ResetMenu();
         configContent.SetActive(true);
     }
-    public void OpenGenetic()
+    public void OpenGeneticInfo()
     {
         ResetMenu();
-        geneticContent.SetActive(true);
+        geneticInfoContent.SetActive(true);
+    }
+    public void OpenBiotechInfo()
+    {
+        ResetMenu();
+        biotechInfoContent.SetActive(true);
+    }
+    public void OpenEvolutionInfo()
+    {
+        ResetMenu();
+        evolutionInfoContent.SetActive(true);
     }
 
     private void ResetMenu()

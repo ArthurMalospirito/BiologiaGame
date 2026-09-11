@@ -54,10 +54,10 @@ public class GeneticController : MonoBehaviour
         ReloadTraits();
     }
 
-    public void OnEnable()
-    {
-        ReloadTraits();
-    }
+    // public void OnEnable()
+    // {
+    //     ReloadTraits();
+    // }
 
     /// <summary>
     /// Aplica todas as características definidas na lista de Genes.

@@ -1,6 +1,8 @@
 
 
+using System.Collections;
 using System.Linq;
+using Enums.DialogueTrigger;
 using Enums.Traits;
 using TMPro;
 using UnityEngine;
@@ -20,6 +22,14 @@ public class RightMenu : MonoBehaviour
     [SerializeField] private TMP_Text sameSexText;
     public static bool canProcreate=true;
     public static int procreateCooldown=0;
+
+    private DialogTrigger[] procreateSquence =
+    {
+        DialogTrigger.FirstProcreate,
+        DialogTrigger.SecondProcreate,
+        DialogTrigger.ThirdProcreate,
+        DialogTrigger.ForthProcreate
+    };
     private void Awake()
     {
         player = GameObject.FindWithTag("Player").GetComponent<Player>();
@@ -42,48 +52,31 @@ public class RightMenu : MonoBehaviour
         var egg = Instantiate(eggPrefab,player.transform.position,Quaternion.identity);
         var childGeneticController = egg.GetComponentInChildren<GeneticController>(true);
 
+        childGeneticController.gameObject.SetActive(true);
+
         var playerGenetiController = player.GetComponent<GeneticController>();
         childGeneticController.parent1=playerGenetiController;
         childGeneticController.parent2=targetGeneticController;
         childGeneticController.hasParents=true;
+        childGeneticController.ReloadTraits();
 
         var childCreature = egg.GetComponentInChildren<Creature>(true);
         childCreature.nest = targetCreature.nest;
+
+        childGeneticController.gameObject.SetActive(false);
 
         canProcreate=false;
         SetProcreate(false);
         rightMenuController.StartProcreateCooldown();
 
-        //Verificador de quantos procriadas.
-        if (!DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstProcreate)) 
-        {
-            DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstProcreate,true);
-            DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstProcreate);
-        }
-        else
-        {
-            if (!DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate))
-            {
-                DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.SecondProcreate,true);
-                DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.SecondProcreate);
-            } else
-            {
-                if (!DialogController.VerifyDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate))
-                {
-                    DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate,true);
-                    DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.ThirdProcreate);
-                } else
-                {
-                    DialogController.SetDialogTrigger(Enums.DialogueTrigger.DialogTrigger.ForthProcreate,true);
-                    DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.ForthProcreate);
-                }
-            }
-        }
-
         childMenuController.SetChild(childGeneticController);
-        childMenuController.OpenChildMenu();
 
         rightMenuController.CloseRightMenu();
+
+        StartDarwinDialog();
+
+        childMenuController.OpenChildMenu();
+
     }
 
     public void SetProcreateCooldown(int value)
@@ -122,6 +115,26 @@ public class RightMenu : MonoBehaviour
         }
         sameSexText.text="";
         procreateButton.interactable=status;
+    }
+
+    private void StartDarwinDialog()
+    {
+        StartCoroutine(StartDarwinDialogCoroutine());   
+    }
+
+    private IEnumerator StartDarwinDialogCoroutine()
+    {
+        yield return new WaitForSeconds(0.1f);
+        //Verificador de quantos procriadas.
+        foreach (var trigger in procreateSquence)
+        {
+            if (!DialogController.VerifyDialogTrigger(trigger))
+            {
+                DialogController.SetDialogTrigger(trigger,true);
+                DarwinMenuController.Instance.OpenMenu(trigger);
+                break;
+            }
+        }
     }
 
 }

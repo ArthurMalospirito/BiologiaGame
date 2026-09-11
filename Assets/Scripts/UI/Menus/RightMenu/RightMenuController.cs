@@ -21,6 +21,10 @@ public class RightMenuController : MonoBehaviour
         RightMenu.canProcreate=true;
         RightMenu.procreateCooldown=0;
     }
+    private void Start()
+    {
+        StartProcreateCooldown();
+    }
     private void Update()
     {
         #if UNITY_ANDROID || UNITY_IOS

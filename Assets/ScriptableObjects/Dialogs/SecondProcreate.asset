@@ -32,12 +32,15 @@ MonoBehaviour:
   - "A primeira lei de Mendel afirma que cada gene \xE9 definido por dois alelos,"
   - "Que representam duas formas de uma mesma caracter\xEDstica ser expressa."
   - "Cada par de alelos possui um alelo <u>dominante</u>, representado como uma letra
-    mai\xFAscula (como \u201CA\u201D)"
-  - "E um <u>recessivo</u>, representado como um a letra min\xFAscula (como \u201Ca\u201D),
-    \nAssim, um par pode ser descrito como AA (homozigoto dominante), Aa (heterozigoto),
-    ou aa (homozigoto recessivo).\n"
-  - "O alelo dominante, se presente (ou seja, nos casos AA e Aa), ter\xE1 sua caracter\xEDstica
-    expressa,\nEnquanto a caracter\xEDstica do alelo recessivo ser\xE1 expressa apenas
-    em organismos homozigotos recessivos (aa).\n"
+    mai\xFAscula (como \u201C<color=#129612>A</color>\u201D)"
+  - "E um <u>recessivo</u>, representado como um a letra min\xFAscula (como \u201C<color=#25D025>a</color>\u201D).\n\n"
+  - Assim, um par pode ser descrito como <color=#129612>AA</color> (homozigoto dominante),
+    <color=#129612>A</color><color=#25D025>a</color> (heterozigoto), ou <color=#25D025>aa</color>
+    (homozigoto recessivo).
+  - "O alelo dominante, se presente (ou seja, nos casos <color=#129612>AA</color>
+    e <color=#129612>A</color><color=#25D025>a</color>), ter\xE1 sua caracter\xEDstica
+    expressa.\n"
+  - "Enquanto a caracter\xEDstica do alelo recessivo ser\xE1 expressa apenas em organismos
+    homozigotos recessivos (<color=#25D025>aa</color>).\n"
   - Espera, mas como isso explica a hereditariedade?
   - "Tente ter mais um herdeiro! Talvez voc\xEA aprenda um pouco mais."

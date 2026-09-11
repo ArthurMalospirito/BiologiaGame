@@ -22,6 +22,7 @@ public class EggController : MonoBehaviour
         {
             geneticController.gameObject.SetActive(true);
             geneticController.ApplyTraits();
+            geneticController.ReloadTraits();
             geneticController.transform.SetParent(null,worldPositionStays:true);
         }
         //Animação Aqui
