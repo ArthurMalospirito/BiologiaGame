@@ -139,9 +139,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 174343823}
+  - component: {fileID: 174343824}
   - component: {fileID: 174343822}
   m_Layer: 0
-  m_Name: BackgroundMusic
+  m_Name: AudioController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -156,7 +157,7 @@ AudioSource:
   m_GameObject: {fileID: 174343821}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -6571069200842126965, guid: e02baeffbe79a8995890c32e436dac77, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 0958453924e82eeccb213884b68a6891, type: 3}
   m_PlayOnAwake: 1
@@ -259,6 +260,25 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &174343824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174343821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecc96cbef74b3edc0b188bd55ae31473, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioController
+  audioMixer: {fileID: 24100000, guid: e02baeffbe79a8995890c32e436dac77, type: 2}
+  masterVolume: 0.5
+  masterVolumeSlider: {fileID: 2104231496}
+  musicVolume: 0.5
+  MusicVolumeSlider: {fileID: 7879412757262158617}
+  SFXVolume: 0.5
+  SFXVolumeSlider: {fileID: 7879412757262158616}
 --- !u!1 &229688942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1005,6 +1025,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 130e8073a67806a4a93966bb28699fc4, type: 3}
+--- !u!114 &2104231496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7049474312550812282, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+  m_PrefabInstance: {fileID: 7879412757262158614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1001 &7879412757262158614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1296,6 +1327,28 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3795246406959162782, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
   m_PrefabInstance: {fileID: 7879412757262158614}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7879412757262158616 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 17034393650514311, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+  m_PrefabInstance: {fileID: 7879412757262158614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
+--- !u!114 &7879412757262158617 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1404569858746910110, guid: 49a106f5eded5414ead7467744ea7a46, type: 3}
+  m_PrefabInstance: {fileID: 7879412757262158614}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Slider
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

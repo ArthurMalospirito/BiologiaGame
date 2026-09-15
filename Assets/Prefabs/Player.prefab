@@ -273,14 +273,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a07eaf6e284ece41a32d33a8693f468, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResourceController
-  damageWithZeroResource: 2
   <CanEatType>k__BackingField: 0
   initialMaxFood: 100
   foodLooseAmount: 1
   FoodBar: {fileID: 0}
+  foodPercentageToRegenHealth: 0.75
   initialMaxWater: 100
   waterLooseAmount: 1
   WaterBar: {fileID: 0}
+  waterPercentageToRegenHealth: 0.75
+  damageWithZeroResource: 2
+  healthPerSecond: 1
 --- !u!114 &7173731165316403849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -437,7 +440,7 @@ AudioSource:
   m_GameObject: {fileID: 25050283671965925}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -1619271891391736339, guid: e02baeffbe79a8995890c32e436dac77, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
