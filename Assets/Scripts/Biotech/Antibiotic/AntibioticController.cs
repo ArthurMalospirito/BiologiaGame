@@ -27,16 +27,17 @@ public class AntibioticController : MonoBehaviour
     }
     private void OnEnable()
     {
-        SetGeneTherapyUses(antiobioticUses);
+        SetAntibioticUses(antiobioticUses);
     }
 
     public void OnClick()
     {
-        SetGeneTherapyUses(antiobioticUses-1);
+        SetAntibioticUses(antiobioticUses-1);
+        PlayerStatsManager.Instance.totalBiotechUses++;
         diseaseController.DesactiveDisease();
     }
 
-    public void SetGeneTherapyUses(int uses)
+    public void SetAntibioticUses(int uses)
     {
         antiobioticUses = uses;
         antiobioticNumberText.text= Convert.ToString(antiobioticUses) + "x";
@@ -46,6 +47,6 @@ public class AntibioticController : MonoBehaviour
 
     public void AddUse()
     {
-        SetGeneTherapyUses(antiobioticUses+1);
+        SetAntibioticUses(antiobioticUses+1);
     }
 }

@@ -73,6 +73,8 @@ public class RightMenu : MonoBehaviour
 
         rightMenuController.CloseRightMenu();
 
+        PlayerStatsManager.Instance.totalProcreates++;
+
         StartDarwinDialog();
 
         childMenuController.OpenChildMenu();

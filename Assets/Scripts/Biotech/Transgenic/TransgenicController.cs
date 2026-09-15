@@ -35,6 +35,7 @@ public class TransgenicController : MonoBehaviour
             tabMenuController.OpenGenes();
             uiGenesController.SetDropdownsActive(true);
             SetTransgenicUses(transgenicUses-1);
+            PlayerStatsManager.Instance.totalBiotechUses++;
         } else
         {
             //Colocar um PopUp, algum aviso que diz que nn tem usos.

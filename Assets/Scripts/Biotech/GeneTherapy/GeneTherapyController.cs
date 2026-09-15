@@ -29,6 +29,7 @@ public class GeneTherapyController : MonoBehaviour
     {
         geneTherapyUpgrade.gameObject.SetActive(true);
         SetGeneTherapyUses(geneTherapyUses-1);
+        PlayerStatsManager.Instance.totalBiotechUses++;
     }
 
     public void SetGeneTherapyUses(int uses)

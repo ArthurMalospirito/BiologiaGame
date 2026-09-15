@@ -20,6 +20,12 @@ public class PlayerStatsManager : MonoBehaviour
     public static Biomes biome;
     public static Biomes biomeColorBuff;
 
+    [Header("GlobalStats")]
+    public int totalTime;
+    public int totalFood;    
+    public int totalProcreates;
+    public int totalBiotechUses;
+
     private void Awake()
     {
         if (Instance != null)
@@ -96,5 +102,13 @@ public class PlayerStatsManager : MonoBehaviour
         //Se não encaixar nada, é 1.2
         creatureData.SetDetectionMultipliyer(1.2f);
         
+    }
+
+    public void CountTotalFood()
+    {
+        foreach(var elem in foodCounts)
+        {
+            totalFood += elem.Value;
+        }
     }
 }
