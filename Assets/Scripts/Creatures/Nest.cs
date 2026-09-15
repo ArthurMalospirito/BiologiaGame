@@ -17,6 +17,8 @@ public class Nest : MonoBehaviour
     }
     private void SpawnCreature()
     {
+        if (creature==null)
+            return;
         var newCreature = Instantiate(creature,transform.position,Quaternion.identity);
         newCreature.transform.SetParent(gameObject.transform);
         newCreature.nest=this;

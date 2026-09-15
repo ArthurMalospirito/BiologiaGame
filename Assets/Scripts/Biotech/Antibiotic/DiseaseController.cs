@@ -44,6 +44,11 @@ public class DiseaseController : MonoBehaviour
         playerHealthController.UpdateStats();
         healthBar.GrowBar(0.9f,true);
         playerMovement.UpdateSpeed();
+
+        if (DialogController.TryDialogTrigger(Enums.DialogueTrigger.DialogTrigger.FirstDisease))
+        {
+            DarwinMenuController.Instance.OpenMenu(Enums.DialogueTrigger.DialogTrigger.FirstDisease);
+        }
     }
 
     public void DesactiveDisease()

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class TransgenicController : MonoBehaviour
 {
+    public static TransgenicController Instance;
 
     [SerializeField] TabMenuController tabMenuController;
 
@@ -15,6 +16,11 @@ public class TransgenicController : MonoBehaviour
     [SerializeField] private UIGenesController uiGenesController;
 
     [SerializeField] private Button transgenicButton;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void OnEnable()
     {

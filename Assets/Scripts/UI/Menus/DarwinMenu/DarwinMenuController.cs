@@ -1,4 +1,5 @@
 
+using System.Collections;
 using Enums.DialogueTrigger;
 using UnityEngine;
 
@@ -17,8 +18,7 @@ public class DarwinMenuController :MonoBehaviour
 
     private void Start()
     {
-        if (DialogController.TryDialogTrigger(DialogTrigger.Start))
-            OpenMenu(DialogTrigger.Start);
+        StartCoroutine(StartFirstDialog());
     }
     public void OpenMenu(DialogTrigger dialogTrigger)
     {
@@ -38,5 +38,12 @@ public class DarwinMenuController :MonoBehaviour
             if (dialog.dialogueTrigger==dialogTrigger) return dialog;
         }
         return null;
+    }
+
+    private IEnumerator StartFirstDialog()
+    {
+        yield return new WaitForEndOfFrame();
+        if (DialogController.TryDialogTrigger(DialogTrigger.Start))
+            OpenMenu(DialogTrigger.Start);
     }
 }

@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c39b8abcb479d25eabfd80f0dec0055, type: 3}
-  m_Name: SecretDialog
+  m_Name: FirstDisease
   m_EditorClassIdentifier: Assembly-CSharp::DialogData
-  dialogueTrigger: 11
+  dialogueTrigger: 10
   lines:
-  - "Parab\xE9ns! \nVoc\xEA encontrou o meu maior segredo."
-  - Use os poderes que recebeu com isso com cautela.
-  - Veja suas biotecnolgias!
-  - E boa sorte na viagem...
+  - EI!
+  - "Voc\xEA comeu uma comida estragada e agora est\xE1 doente!"
+  - Tente interagir com o menu de biotecnologias para resolver esse problema.

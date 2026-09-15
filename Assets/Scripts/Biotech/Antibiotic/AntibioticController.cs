@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class AntibioticController : MonoBehaviour
 {
+    public static AntibioticController Instance;
+
     public int antiobioticUses =0;
 
     [SerializeField] private TMP_Text antiobioticNumberText;
@@ -12,6 +14,11 @@ public class AntibioticController : MonoBehaviour
     [SerializeField] private Button antibioticButton;
     private Player player;
     private DiseaseController diseaseController;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {

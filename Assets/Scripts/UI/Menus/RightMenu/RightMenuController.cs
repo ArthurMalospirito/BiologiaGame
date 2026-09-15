@@ -23,6 +23,7 @@ public class RightMenuController : MonoBehaviour
     }
     private void Start()
     {
+        RightMenu.canProcreate=false;
         StartProcreateCooldown();
     }
     private void Update()

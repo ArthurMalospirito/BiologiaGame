@@ -5,6 +5,7 @@
 using Enums.EnumMovementType;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
         #else 
             PlayerMovement.currentMovementType=Application.isMobilePlatform ? MovementType.EightDirection : MovementType.SeekMouse;
         #endif
+        SetPause(false);
     }
 
     public void SetPause(bool pauseState)

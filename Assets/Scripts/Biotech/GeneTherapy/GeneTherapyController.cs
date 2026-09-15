@@ -6,12 +6,19 @@ using UnityEngine.UI;
 
 public class GeneTherapyController : MonoBehaviour
 {
+    public static GeneTherapyController Instance;
+
     public int geneTherapyUses =0;
 
     [SerializeField] private TMP_Text geneTherapyNumberText;
 
     [SerializeField] private Button geneTherapyButton;
     [SerializeField] private GeneTherapyUpgrade geneTherapyUpgrade;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void OnEnable()
     {

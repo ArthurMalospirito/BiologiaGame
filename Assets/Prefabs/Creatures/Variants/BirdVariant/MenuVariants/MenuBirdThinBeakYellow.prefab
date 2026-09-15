@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2531963444325935750, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_Name
-      value: BirdThickBeak
+      value: BirdThinBeakYellow
       objectReference: {fileID: 0}
     - target: {fileID: 2763786117333460399, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62,13 +62,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2842132847699362038, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: m_Color.r
-      value: 0.023534894
+      value: 0.97573745
+      objectReference: {fileID: 0}
+    - target: {fileID: 7953749938949274212, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
+      propertyPath: genes.Array.data[1]._genotype
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7953749938949274212, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
       propertyPath: genes.Array.data[2]._genotype
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5647343702053156940, guid: ab8141e52be3b7c4084e71300027ca43, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
