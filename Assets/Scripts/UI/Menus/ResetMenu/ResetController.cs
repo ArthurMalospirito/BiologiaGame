@@ -16,9 +16,9 @@ public class ResetController:MonoBehaviour
 
     private void DisplayStats()
     {
-        //Colocar para pegar do timer;
-        var time = "XX:XX";
-        timeText.text = "Você sobreviveu por "+ "<size=40><b>"+ time +"</b></size>"+" Minutos";
+        var seconds = Timer.Instance.seconds;
+        var minutes = Timer.Instance.minutes;
+        timeText.text = "Você sobreviveu por "+ "<size=40><b>"+ minutes.ToString() +"</b></size>"+" Minutos e "+"<size=40><b>"+ seconds.ToString() +"</b></size>"+" Segundos";
 
         PlayerStatsManager.Instance.CountTotalFood();
         foodText.text = "Você comeu "+ "<size=40><b>"+ PlayerStatsManager.Instance.totalFood.ToString() +"</b></size>"+" comidas";

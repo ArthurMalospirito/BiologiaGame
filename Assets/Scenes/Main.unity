@@ -733,6 +733,7 @@ GameObject:
   - component: {fileID: 1721767645}
   - component: {fileID: 1721767644}
   - component: {fileID: 1721767646}
+  - component: {fileID: 1721767647}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -779,6 +780,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf42684ee1f80ecb7b38b29f5e0917c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogController
+--- !u!114 &1721767647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721767643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a5bf7dd26163164a8a73e860fb402a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Timer
+  minutes: 0
+  seconds: 0
 --- !u!1001 &1802063106
 PrefabInstance:
   m_ObjectHideFlags: 0
