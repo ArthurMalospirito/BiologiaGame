@@ -88,7 +88,7 @@ public class RightMenu : MonoBehaviour
             procreateCooldownText.text="";
             return;
         }
-        procreateCooldownText.text=value.ToString();
+        procreateCooldownText.text=value.ToString()+"s";
     }
 
     private void SetProcreate(bool status)

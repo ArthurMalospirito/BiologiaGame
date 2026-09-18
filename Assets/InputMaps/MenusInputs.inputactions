@@ -48,6 +48,17 @@
                 },
                 {
                     "name": "",
+                    "id": "660b76a7-1185-4ce9-abb7-06910cf68896",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tab",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "c2655811-ed3d-40fe-80f7-cfec694df729",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",

@@ -45,7 +45,7 @@ public class TabMenuController : MonoBehaviour
 
     private void Start()
     {
-        OpenGenes();
+        OpenBiotech();
     }
 
     public void OpenGenes()
